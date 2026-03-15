@@ -29,7 +29,7 @@ export function RevenueWidget() {
           .lte('checkin_date', endOfMonth)
 
         if (data) {
-          const total = data.reduce((sum, r) => sum + (r.amount_gross || 0), 0)
+          const total = data.reduce((sum: number, r: { amount_gross: number | null }) => sum + (r.amount_gross || 0), 0)
           setRevenue(total)
         } else {
           setRevenue(0)

@@ -94,7 +94,7 @@ export function TopProperties() {
           if (inspections && inspections.length > 0) {
             avgScore =
               inspections.reduce(
-                (sum, i) => sum + (i.cleanliness_score ?? 0),
+                (sum: number, i: { cleanliness_score: number | null }) => sum + (i.cleanliness_score ?? 0),
                 0
               ) / inspections.length
           }

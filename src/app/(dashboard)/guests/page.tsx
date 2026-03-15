@@ -48,7 +48,7 @@ export default function GuestsPage() {
         .from('properties')
         .select('id, name')
         .in('id', propIds)
-      const propMap = new Map((properties ?? []).map((p: { id: string; name: string }) => [p.id, p.name]))
+      const propMap = new Map<string, string>((properties ?? []).map((p: { id: string; name: string }) => [p.id, p.name]))
 
       for (const resa of reservations as Reservation[]) {
         // Dernier message

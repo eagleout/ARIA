@@ -47,8 +47,8 @@ export function TodayMissions() {
         }
 
         // Enrichir avec noms des agents et propriétés
-        const propertyIds = [...new Set(rawMissions.map((m) => m.property_id))]
-        const agentIds = [...new Set(rawMissions.map((m) => m.assigned_to).filter(Boolean))] as string[]
+        const propertyIds = [...new Set(rawMissions.map((m: { property_id: string }) => m.property_id))]
+        const agentIds = [...new Set(rawMissions.map((m: { assigned_to: string | null }) => m.assigned_to).filter(Boolean))] as string[]
 
         const [propRes, agentRes] = await Promise.all([
           supabase.from('properties').select('id, name').in('id', propertyIds),
@@ -57,10 +57,10 @@ export function TodayMissions() {
             : Promise.resolve({ data: [] as UserType[] }),
         ])
 
-        const propMap = new Map(propRes.data?.map((p) => [p.id, p.name]) ?? [])
-        const agentMap = new Map(agentRes.data?.map((a) => [a.id, a]) ?? [])
+        const propMap = new Map<string, string>(propRes.data?.map((p: { id: string; name: string }) => [p.id, p.name]) ?? [])
+        const agentMap = new Map<string, UserType>(agentRes.data?.map((a: UserType) => [a.id, a]) ?? [])
 
-        const enriched: MissionWithAgent[] = rawMissions.map((m) => ({
+        const enriched: MissionWithAgent[] = rawMissions.map((m: CleaningMission) => ({
           ...m,
           propertyName: propMap.get(m.property_id) ?? 'Propriété',
           agent: m.assigned_to ? agentMap.get(m.assigned_to) ?? null : null,

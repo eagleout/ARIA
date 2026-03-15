@@ -44,7 +44,7 @@ export function useMessages(reservationId: string) {
           table: 'messages',
           filter: `reservation_id=eq.${reservationId}`,
         },
-        (payload) => {
+        (payload: { new: unknown }) => {
           setMessages((prev) => [...prev, payload.new as Message])
         }
       )
