@@ -1,0 +1,89 @@
+<!-- =====================================================
+  PAGE NOS CRÈCHES — BLOC 4 : POURQUOI NOTRE RÉSEAU
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.ncw * { box-sizing: border-box; margin: 0; padding: 0; }
+.ncw { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+@media (max-width: 768px) { .ncw { padding: 64px 0; } }
+.ncw-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.ncw-center { text-align: center; margin-bottom: 56px; }
+.ncw-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.ncw-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.ncw-title span { color: #E8813A; }
+.ncw-subtitle { font-size: 17px; color: #5A5A6A; max-width: 600px; margin: 0 auto; }
+
+.ncw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.ncw-card {
+  background: #FAFAF8; border-radius: 20px; padding: 36px 28px;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.ncw-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.08); }
+
+.ncw-card-icon {
+  width: 72px; height: 72px; border-radius: 22px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; margin-bottom: 20px;
+}
+.ncw-ci1 { background: #FFF0E0; }
+.ncw-ci2 { background: #E8F5E9; }
+.ncw-ci3 { background: #E3F2FD; }
+.ncw-ci4 { background: #F3E8FF; }
+.ncw-ci5 { background: #FFF0E0; }
+.ncw-ci6 { background: #E8F5E9; }
+
+.ncw-card h3 { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 800; color: #2A2A2A; margin-bottom: 10px; }
+.ncw-card p { font-size: 14px; color: #5A5A6A; line-height: 1.7; }
+
+@media (max-width: 900px) { .ncw-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .ncw-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
+</style>
+
+<section class="ncw">
+  <div class="ncw-container">
+    <div class="ncw-center">
+      <div class="ncw-label">L'engagement Les Petitous</div>
+      <h2 class="ncw-title">Ce que chaque crèche <span>vous garantit</span></h2>
+      <p class="ncw-subtitle">Quel que soit l'établissement choisi, votre enfant bénéficie des mêmes standards de qualité et de bienveillance.</p>
+    </div>
+
+    <div class="ncw-grid">
+      <div class="ncw-card">
+        <div class="ncw-card-icon ncw-ci1">👫</div>
+        <h3>Maximum 14 enfants</h3>
+        <p>Un accueil à taille humaine pour garantir l'attention individuelle et le bien-être de chaque enfant.</p>
+      </div>
+      <div class="ncw-card">
+        <div class="ncw-card-icon ncw-ci2">🎓</div>
+        <h3>Équipe diplômée</h3>
+        <p>Éducatrices de jeunes enfants, auxiliaires de puériculture : des professionnelles qualifiées et passionnées.</p>
+      </div>
+      <div class="ncw-card">
+        <div class="ncw-card-icon ncw-ci3">🍽️</div>
+        <h3>Repas faits maison</h3>
+        <p>Des menus équilibrés préparés chaque jour sur place avec des produits frais et de saison.</p>
+      </div>
+      <div class="ncw-card">
+        <div class="ncw-card-icon ncw-ci4">📱</div>
+        <h3>Suivi quotidien</h3>
+        <p>Recevez chaque jour des nouvelles, photos et compte-rendus de la journée de votre enfant via notre application.</p>
+      </div>
+      <div class="ncw-card">
+        <div class="ncw-card-icon ncw-ci5">💶</div>
+        <h3>Aides financières</h3>
+        <p>Éligible au CMG (CAF) et au crédit d'impôt de 50%. Nous vous accompagnons dans vos démarches.</p>
+      </div>
+      <div class="ncw-card">
+        <div class="ncw-card-icon ncw-ci6">🌱</div>
+        <h3>Pédagogie active</h3>
+        <p>Activités d'éveil inspirées de Montessori : arts, musique, motricité, jardinage et jeux sensoriels.</p>
+      </div>
+    </div>
+  </div>
+</section>

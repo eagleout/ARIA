@@ -1,0 +1,132 @@
+<!-- =====================================================
+  PAGE ÉTABLISSEMENT — BLOC 6 : CARTE & ACCÈS
+  Widget Elementor : HTML
+  
+  PERSONNALISER :
+  - Remplacer l'iframe Google Maps par ton embed
+  - Pour obtenir l'embed : Google Maps > Cherche ton adresse > Partager > Intégrer une carte > Copie l'iframe
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.epm * { box-sizing: border-box; margin: 0; padding: 0; }
+.epm { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+@media (max-width: 768px) { .epm { padding: 64px 0; } }
+.epm-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.epm-center { text-align: center; margin-bottom: 48px; }
+.epm-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.epm-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.epm-title span { color: #E8813A; }
+
+.epm-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: stretch; }
+
+/* Map */
+.epm-map {
+  border-radius: 24px; overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  min-height: 400px; background: #F0EDE8;
+}
+.epm-map iframe { width: 100%; height: 100%; min-height: 400px; border: 0; display: block; }
+.epm-map-placeholder {
+  width: 100%; height: 100%; min-height: 400px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: #8A8A9A; font-size: 14px; text-align: center; padding: 24px;
+}
+.epm-map-placeholder span { font-size: 48px; display: block; margin-bottom: 12px; }
+
+/* Info cards */
+.epm-info { display: flex; flex-direction: column; gap: 16px; }
+.epm-info-card {
+  background: #FAFAF8; border-radius: 16px; padding: 24px;
+  border: 1px solid rgba(0,0,0,0.03);
+  display: flex; align-items: flex-start; gap: 16px;
+}
+.epm-info-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.epm-info-icon-o { background: #FFF0E0; }
+.epm-info-icon-g { background: #E8F5E9; }
+.epm-info-icon-b { background: #E3F2FD; }
+.epm-info-icon-p { background: #F3E8FF; }
+.epm-info-title { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; color: #2A2A2A; margin-bottom: 4px; }
+.epm-info-text { font-size: 14px; color: #5A5A6A; line-height: 1.6; }
+.epm-info-text a { color: #E8813A; font-weight: 600; text-decoration: none; }
+.epm-info-text a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) { .epm-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="epm" id="ep-map">
+  <div class="epm-container">
+    <div class="epm-center">
+      <div class="epm-label">Nous trouver</div>
+      <h2 class="epm-title">Comment venir à notre crèche de <span>Villemomble</span></h2>
+    </div>
+
+    <div class="epm-grid">
+
+      <div class="epm-map">
+        <!-- 
+          REMPLACE ce placeholder par ton iframe Google Maps :
+          1. Va sur Google Maps
+          2. Cherche ton adresse
+          3. Clique "Partager" → "Intégrer une carte"
+          4. Copie l'iframe et colle-la ici
+        -->
+        <div class="epm-map-placeholder">
+          <span>🗺️</span>
+          Remplace ce bloc par ton iframe Google Maps :<br><br>
+          <code style="font-size:12px;background:#eee;padding:8px 12px;border-radius:8px;display:block;max-width:400px;">
+            &lt;iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"&gt;&lt;/iframe&gt;
+          </code>
+        </div>
+      </div>
+
+      <div class="epm-info">
+
+        <div class="epm-info-card">
+          <div class="epm-info-icon epm-info-icon-o">📍</div>
+          <div>
+            <div class="epm-info-title">Adresse</div>
+            <!-- REMPLACE par ta vraie adresse -->
+            <div class="epm-info-text">12 Rue de la République<br>93250 Villemomble</div>
+          </div>
+        </div>
+
+        <div class="epm-info-card">
+          <div class="epm-info-icon epm-info-icon-g">🚇</div>
+          <div>
+            <div class="epm-info-title">Transports</div>
+            <!-- REMPLACE par tes vrais accès -->
+            <div class="epm-info-text">RER E — Gare de Villemomble (5 min à pied)<br>Bus 203, 303 — Arrêt République</div>
+          </div>
+        </div>
+
+        <div class="epm-info-card">
+          <div class="epm-info-icon epm-info-icon-b">🅿️</div>
+          <div>
+            <div class="epm-info-title">Stationnement</div>
+            <div class="epm-info-text">Places de parking gratuites devant la crèche<br>Stationnement libre dans la rue</div>
+          </div>
+        </div>
+
+        <div class="epm-info-card">
+          <div class="epm-info-icon epm-info-icon-p">📞</div>
+          <div>
+            <div class="epm-info-title">Contact direct</div>
+            <!-- REMPLACE par tes vrais contacts -->
+            <div class="epm-info-text">
+              <a href="tel:+33100000000">01 00 00 00 00</a><br>
+              <a href="mailto:villemomble@lespetitous.fr">villemomble@lespetitous.fr</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

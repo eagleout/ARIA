@@ -1,0 +1,319 @@
+<!-- =====================================================
+  PAGE CONTACT — BLOC 2 : FORMULAIRE GÉNÉRAL + CARTE
+  Widget Elementor : HTML
+  
+  NOTE : Ce formulaire est un formulaire de contact GÉNÉRAL
+  (pas de pré-inscription). Pour les pré-inscriptions,
+  on redirige vers /pre-inscription/ et Meeko.
+  
+  Tu peux remplacer ce formulaire HTML par un shortcode
+  WPForms : [wpforms id="XXX"] ou Contact Form 7
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.ctf * { box-sizing: border-box; margin: 0; padding: 0; }
+.ctf { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+@media (max-width: 768px) { .ctf { padding: 64px 0; } }
+.ctf a { text-decoration: none; }
+.ctf-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.ctf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+
+/* ===== FORMULAIRE ===== */
+.ctf-form-wrap {
+  background: #FAFAF8; border-radius: 24px; padding: 40px;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.ctf-form-title {
+  font-family: 'Nunito', sans-serif; font-size: 24px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 8px;
+}
+.ctf-form-sub { font-size: 15px; color: #5A5A6A; margin-bottom: 28px; }
+.ctf-form-sub a { color: #E8813A; font-weight: 600; }
+
+/* 
+  ⚠️ OPTION 1 : Remplace tout le bloc .ctf-form par :
+  [wpforms id="XXX"]
+  ou
+  [contact-form-7 id="XXX" title="Contact"]
+  
+  OPTION 2 : Garde le formulaire HTML ci-dessous
+  (nécessite un traitement backend ou un plugin)
+*/
+.ctf-form { display: flex; flex-direction: column; gap: 20px; }
+.ctf-field { display: flex; flex-direction: column; gap: 6px; }
+.ctf-field label {
+  font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 700;
+  color: #2A2A2A;
+}
+.ctf-field input,
+.ctf-field select,
+.ctf-field textarea {
+  font-family: 'Quicksand', sans-serif; font-size: 15px;
+  padding: 14px 18px; border-radius: 14px;
+  border: 2px solid rgba(0,0,0,0.06);
+  background: white; color: #2A2A2A;
+  transition: border-color 0.3s;
+  outline: none; width: 100%;
+}
+.ctf-field input:focus,
+.ctf-field select:focus,
+.ctf-field textarea:focus { border-color: #E8813A; }
+.ctf-field textarea { resize: vertical; min-height: 120px; }
+
+.ctf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 500px) { .ctf-row { grid-template-columns: 1fr; } }
+
+.ctf-consent {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13px; color: #8A8A9A; line-height: 1.5;
+}
+.ctf-consent input[type="checkbox"] {
+  width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0;
+  accent-color: #E8813A;
+}
+.ctf-consent a { color: #E8813A; }
+
+.ctf-submit {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 16px 36px;
+  background: #5BBD72; color: white; width: 100%;
+  box-shadow: 0 4px 16px rgba(91,189,114,0.3);
+  transition: all 0.35s ease;
+}
+.ctf-submit:hover { background: #4AA862; transform: translateY(-2px); }
+
+/* ===== SIDEBAR DROITE ===== */
+.ctf-sidebar { display: flex; flex-direction: column; gap: 24px; }
+
+/* Siège social */
+.ctf-siege {
+  background: #FAFAF8; border-radius: 24px; padding: 32px;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.ctf-siege h3 {
+  font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.ctf-siege h3 span { font-size: 22px; }
+.ctf-siege-info { display: flex; flex-direction: column; gap: 12px; }
+.ctf-siege-line {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 15px; color: #5A5A6A;
+}
+.ctf-siege-line-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.ctf-siege-line a { color: #E8813A; font-weight: 600; }
+
+/* Carte */
+.ctf-map {
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  min-height: 280px; background: #F0EDE8;
+}
+.ctf-map iframe { width: 100%; height: 280px; border: 0; display: block; }
+.ctf-map-placeholder {
+  width: 100%; height: 280px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: #8A8A9A; font-size: 14px; text-align: center; padding: 24px;
+}
+.ctf-map-placeholder span { font-size: 40px; display: block; margin-bottom: 10px; }
+
+/* Réseaux sociaux */
+.ctf-social {
+  background: linear-gradient(135deg, #E8F5E9, #FFF9F3);
+  border-radius: 20px; padding: 28px;
+  border: 2px solid rgba(91,189,114,0.15);
+  text-align: center;
+}
+.ctf-social h3 {
+  font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 16px;
+}
+.ctf-social-links { display: flex; justify-content: center; gap: 14px; }
+.ctf-social-link {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: white; padding: 12px 22px; border-radius: 60px;
+  font-size: 14px; font-weight: 600; color: #2A2A2A;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+.ctf-social-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); color: #E8813A; }
+.ctf-social-link span { font-size: 18px; }
+
+/* CTA pré-inscription */
+.ctf-preinscription {
+  background: linear-gradient(135deg, #E8813A, #F5A623);
+  border-radius: 20px; padding: 28px;
+  text-align: center; color: white;
+}
+.ctf-preinscription h3 {
+  font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 800;
+  margin-bottom: 10px;
+}
+.ctf-preinscription p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; }
+.ctf-preinscription-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 14px 28px;
+  background: white; color: #E8813A;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.ctf-preinscription-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+@media (max-width: 900px) { .ctf-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="ctf">
+  <div class="ctf-container">
+    <div class="ctf-grid">
+
+      <!-- ===== FORMULAIRE ===== -->
+      <div class="ctf-form-wrap">
+        <h2 class="ctf-form-title">Envoyez-nous un message</h2>
+        <p class="ctf-form-sub">Pour une pré-inscription, utilisez plutôt notre <a href="/pre-inscription/">formulaire dédié via Meeko</a>.</p>
+
+        <!-- 
+          ⚠️ REMPLACE ce formulaire par ton shortcode WPForms :
+          [wpforms id="XXX"]
+          
+          Ou garde ce formulaire HTML et connecte-le à un plugin
+          de traitement (WPForms, Contact Form 7, etc.)
+        -->
+        <div class="ctf-form">
+
+          <div class="ctf-row">
+            <div class="ctf-field">
+              <label>Prénom *</label>
+              <input type="text" placeholder="Votre prénom" required>
+            </div>
+            <div class="ctf-field">
+              <label>Nom *</label>
+              <input type="text" placeholder="Votre nom" required>
+            </div>
+          </div>
+
+          <div class="ctf-row">
+            <div class="ctf-field">
+              <label>Email *</label>
+              <input type="email" placeholder="votre@email.fr" required>
+            </div>
+            <div class="ctf-field">
+              <label>Téléphone</label>
+              <input type="tel" placeholder="06 00 00 00 00">
+            </div>
+          </div>
+
+          <div class="ctf-field">
+            <label>Crèche concernée</label>
+            <select>
+              <option value="">— Choisissez une crèche —</option>
+              <option value="villemomble">Villemomble (93)</option>
+              <option value="juvisy">Juvisy-sur-Orge (91)</option>
+              <option value="kremlin">Kremlin-Bicêtre (94)</option>
+              <option value="general">Question générale</option>
+            </select>
+          </div>
+
+          <div class="ctf-field">
+            <label>Objet</label>
+            <select>
+              <option value="">— Choisissez un sujet —</option>
+              <option value="visite">Demande de visite</option>
+              <option value="tarifs">Question sur les tarifs</option>
+              <option value="places">Disponibilité des places</option>
+              <option value="pedagogie">Question sur la pédagogie</option>
+              <option value="recrutement">Candidature / Recrutement</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="ctf-field">
+            <label>Votre message *</label>
+            <textarea placeholder="Décrivez votre demande..." required></textarea>
+          </div>
+
+          <div class="ctf-consent">
+            <input type="checkbox" required>
+            <span>J'accepte que mes données soient traitées pour répondre à ma demande, conformément à la <a href="/politique-de-confidentialite/">politique de confidentialité</a>.</span>
+          </div>
+
+          <button type="submit" class="ctf-submit">Envoyer le message →</button>
+        </div>
+
+      </div>
+
+      <!-- ===== SIDEBAR ===== -->
+      <div class="ctf-sidebar">
+
+        <!-- Siège social -->
+        <div class="ctf-siege">
+          <h3><span>🏢</span> Siège social</h3>
+          <div class="ctf-siege-info">
+            <div class="ctf-siege-line">
+              <span class="ctf-siege-line-icon">🏷️</span>
+              <!-- REMPLACE par le vrai nom de ta société -->
+              <span><strong>OMA Services</strong><br>Réseau Les Petitous</span>
+            </div>
+            <div class="ctf-siege-line">
+              <span class="ctf-siege-line-icon">📍</span>
+              <!-- REMPLACE par ta vraie adresse -->
+              <span>Adresse du siège<br>Île-de-France</span>
+            </div>
+            <div class="ctf-siege-line">
+              <span class="ctf-siege-line-icon">📞</span>
+              <a href="tel:+33100000000">01 00 00 00 00</a>
+            </div>
+            <div class="ctf-siege-line">
+              <span class="ctf-siege-line-icon">✉️</span>
+              <a href="mailto:contact@lespetitous.fr">contact@lespetitous.fr</a>
+            </div>
+            <div class="ctf-siege-line">
+              <span class="ctf-siege-line-icon">🕐</span>
+              <span>Lun – Ven : 8h00 – 18h00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte -->
+        <div class="ctf-map">
+          <!-- REMPLACE par ton iframe Google Maps du siège :
+          <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+          -->
+          <div class="ctf-map-placeholder">
+            <span>🗺️</span>
+            Intègre ici ta carte Google Maps
+          </div>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="ctf-social">
+          <h3>Suivez-nous au quotidien 🦒</h3>
+          <div class="ctf-social-links">
+            <!-- REMPLACE par tes vrais liens -->
+            <a href="https://instagram.com/lespetitous" target="_blank" rel="noopener" class="ctf-social-link">
+              <span>📸</span> Instagram
+            </a>
+            <a href="https://facebook.com/lespetitous" target="_blank" rel="noopener" class="ctf-social-link">
+              <span>👍</span> Facebook
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA pré-inscription -->
+        <div class="ctf-preinscription">
+          <h3>Vous souhaitez inscrire votre enfant ?</h3>
+          <p>Utilisez notre formulaire de pré-inscription en ligne pour une réponse rapide.</p>
+          <a href="/pre-inscription/" class="ctf-preinscription-btn">Pré-inscrire mon enfant →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

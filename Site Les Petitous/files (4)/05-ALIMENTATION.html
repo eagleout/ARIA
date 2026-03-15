@@ -1,0 +1,128 @@
+<!-- =====================================================
+  PAGE PÉDAGOGIE — BLOC 5 : L'ALIMENTATION
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.pdn * { box-sizing: border-box; margin: 0; padding: 0; }
+.pdn { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; position: relative; overflow: hidden; }
+@media (max-width: 768px) { .pdn { padding: 64px 0; } }
+.pdn::before {
+  content: ''; position: absolute; top: -80px; right: -80px;
+  width: 300px; height: 300px; background: rgba(232,129,58,0.08);
+  border-radius: 50%; filter: blur(60px);
+}
+.pdn-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+.pdn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+
+.pdn-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.pdn-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 16px; }
+.pdn-title span { color: #E8813A; }
+.pdn-text { font-size: 16px; color: #5A5A6A; line-height: 1.8; margin-bottom: 20px; }
+
+.pdn-features { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+.pdn-feat {
+  display: flex; align-items: center; gap: 16px;
+  background: white; padding: 16px 20px; border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.pdn-feat:hover { transform: translateX(4px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.pdn-feat-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.pdn-fi1 { background: #E8F5E9; }
+.pdn-fi2 { background: #FFF0E0; }
+.pdn-fi3 { background: #E3F2FD; }
+.pdn-fi4 { background: #F3E8FF; }
+.pdn-feat-title { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px; color: #2A2A2A; }
+.pdn-feat-desc { font-size: 13px; color: #8A8A9A; }
+
+/* Visual side */
+.pdn-visual { position: relative; }
+.pdn-img {
+  width: 100%; aspect-ratio: 1/1; border-radius: 28px;
+  background: linear-gradient(135deg, #E8F5E9, #FFF0E0);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 100px; overflow: hidden;
+}
+.pdn-img img { width: 100%; height: 100%; object-fit: cover; }
+.pdn-badge {
+  position: absolute; top: -12px; right: -12px;
+  background: #E8813A; color: white;
+  padding: 14px 22px; border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(232,129,58,0.3);
+  text-align: center;
+}
+.pdn-badge-num { font-family: 'Nunito', sans-serif; font-size: 24px; font-weight: 800; }
+.pdn-badge-txt { font-size: 11px; font-weight: 600; opacity: 0.9; }
+
+@media (max-width: 900px) {
+  .pdn-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pdn-visual { order: -1; max-width: 400px; margin: 0 auto; }
+}
+</style>
+
+<section class="pdn">
+  <div class="pdn-container">
+    <div class="pdn-grid">
+
+      <div>
+        <div class="pdn-label">Alimentation</div>
+        <h2 class="pdn-title">Des repas faits maison, <span>chaque jour</span></h2>
+        <p class="pdn-text">Chez Les Petitous, l'alimentation fait partie intégrante de notre projet pédagogique. Les repas sont préparés chaque jour sur place par notre cuisinière, avec des produits frais, locaux et de saison.</p>
+        <p class="pdn-text">Le temps du repas est aussi un moment d'apprentissage : découverte des saveurs, autonomie à table, convivialité et partage.</p>
+
+        <div class="pdn-features">
+          <div class="pdn-feat">
+            <div class="pdn-feat-icon pdn-fi1">🥦</div>
+            <div>
+              <div class="pdn-feat-title">Produits frais et de saison</div>
+              <div class="pdn-feat-desc">Fruits, légumes et protéines sélectionnés auprès de producteurs locaux</div>
+            </div>
+          </div>
+          <div class="pdn-feat">
+            <div class="pdn-feat-icon pdn-fi2">👩‍🍳</div>
+            <div>
+              <div class="pdn-feat-title">Cuisinés sur place</div>
+              <div class="pdn-feat-desc">Aucun plat industriel — tout est préparé dans notre cuisine chaque matin</div>
+            </div>
+          </div>
+          <div class="pdn-feat">
+            <div class="pdn-feat-icon pdn-fi3">📋</div>
+            <div>
+              <div class="pdn-feat-title">Menus validés par une diététicienne</div>
+              <div class="pdn-feat-desc">Équilibre nutritionnel adapté à chaque tranche d'âge</div>
+            </div>
+          </div>
+          <div class="pdn-feat">
+            <div class="pdn-feat-icon pdn-fi4">⚠️</div>
+            <div>
+              <div class="pdn-feat-title">Allergies et régimes pris en charge</div>
+              <div class="pdn-feat-desc">PAI (Projet d'Accueil Individualisé) mis en place si nécessaire</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pdn-visual">
+        <div class="pdn-img">
+          <!-- REMPLACE par ta vraie photo :
+          <img src="/wp-content/uploads/repas-creche.jpg" alt="Repas fait maison à la crèche Les Petitous">
+          -->
+          🍽️
+        </div>
+        <div class="pdn-badge">
+          <div class="pdn-badge-num">100%</div>
+          <div class="pdn-badge-txt">Fait maison</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

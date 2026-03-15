@@ -1,0 +1,97 @@
+<!-- =====================================================
+  PAGE ÉTABLISSEMENT — BLOC 4 : NOTRE ÉQUIPE
+  Widget Elementor : HTML
+  
+  PERSONNALISER :
+  - Remplacer les prénoms et postes par ta vraie équipe
+  - Remplacer les emojis par les photos de l'équipe
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.epe * { box-sizing: border-box; margin: 0; padding: 0; }
+.epe { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+@media (max-width: 768px) { .epe { padding: 64px 0; } }
+.epe-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.epe-center { text-align: center; }
+.epe-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.epe-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.epe-title span { color: #E8813A; }
+.epe-subtitle { font-size: 17px; color: #5A5A6A; max-width: 600px; margin: 0 auto 48px; }
+
+.epe-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+.epe-card {
+  background: #FAFAF8; border-radius: 20px; padding: 32px 20px;
+  text-align: center; border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.epe-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.06); }
+
+.epe-avatar {
+  width: 100px; height: 100px; border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px; overflow: hidden;
+}
+/* 
+  POUR METTRE UNE VRAIE PHOTO : 
+  Supprime le emoji et ajoute :
+  <img src="/wp-content/uploads/equipe-sarah.jpg" alt="Sarah" style="width:100%;height:100%;object-fit:cover;">
+*/
+.epe-av1 { background: #FFF0E0; }
+.epe-av2 { background: #E8F5E9; }
+.epe-av3 { background: #E3F2FD; }
+.epe-av4 { background: #F3E8FF; }
+
+.epe-name { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 800; color: #2A2A2A; margin-bottom: 4px; }
+.epe-role { font-size: 14px; color: #E8813A; font-weight: 600; margin-bottom: 10px; }
+.epe-bio { font-size: 13px; color: #5A5A6A; line-height: 1.6; }
+
+@media (max-width: 900px) { .epe-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .epe-grid { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; } }
+</style>
+
+<section class="epe">
+  <div class="epe-container">
+    <div class="epe-center">
+      <div class="epe-label">Notre équipe</div>
+      <h2 class="epe-title">Des professionnelles <span>passionnées</span></h2>
+      <p class="epe-subtitle">Notre équipe de Villemomble est composée de professionnelles diplômées de la petite enfance, formées à l'accompagnement bienveillant de votre enfant.</p>
+    </div>
+
+    <div class="epe-grid">
+      <!-- REMPLACE chaque membre par ta vraie équipe -->
+
+      <div class="epe-card">
+        <div class="epe-avatar epe-av1">👩‍💼</div>
+        <div class="epe-name">Sophie</div>
+        <div class="epe-role">Référente technique (EJE)</div>
+        <div class="epe-bio">Éducatrice de jeunes enfants, 8 ans d'expérience en petite enfance</div>
+      </div>
+
+      <div class="epe-card">
+        <div class="epe-avatar epe-av2">👩‍⚕️</div>
+        <div class="epe-name">Marie</div>
+        <div class="epe-role">Auxiliaire de puériculture</div>
+        <div class="epe-bio">Spécialisée dans l'accompagnement des tout-petits et l'éveil sensoriel</div>
+      </div>
+
+      <div class="epe-card">
+        <div class="epe-avatar epe-av3">👩‍🏫</div>
+        <div class="epe-name">Fatima</div>
+        <div class="epe-role">Animatrice petite enfance</div>
+        <div class="epe-bio">Passionnée d'activités créatives et d'éveil musical</div>
+      </div>
+
+      <div class="epe-card">
+        <div class="epe-avatar epe-av4">👩‍🍳</div>
+        <div class="epe-name">Céline</div>
+        <div class="epe-role">Cuisinière</div>
+        <div class="epe-bio">Repas faits maison avec des produits frais, bio et de saison</div>
+      </div>
+
+    </div>
+  </div>
+</section>

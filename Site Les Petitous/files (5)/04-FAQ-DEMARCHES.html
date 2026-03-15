@@ -1,0 +1,201 @@
+<!-- =====================================================
+  PAGE TARIFS & AIDES — BLOC 4 : FAQ TARIFS + DÉMARCHES CMG
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.taq * { box-sizing: border-box; margin: 0; padding: 0; }
+.taq { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+@media (max-width: 768px) { .taq { padding: 64px 0; } }
+.taq-container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.taq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+
+/* Démarches CMG */
+.taq-demarches { }
+.taq-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.taq-title { font-family: 'Nunito', sans-serif; font-size: clamp(24px,3.5vw,32px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 20px; }
+.taq-title span { color: #E8813A; }
+.taq-text { font-size: 15px; color: #5A5A6A; line-height: 1.8; margin-bottom: 24px; }
+
+.taq-steps { display: flex; flex-direction: column; gap: 16px; }
+.taq-step {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: #FAFAF8; border-radius: 16px; padding: 20px;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.taq-step:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+.taq-step-num {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: #E8813A; color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800;
+  flex-shrink: 0;
+}
+.taq-step h4 { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700; color: #2A2A2A; margin-bottom: 4px; }
+.taq-step p { font-size: 13px; color: #5A5A6A; line-height: 1.6; }
+
+.taq-help {
+  margin-top: 24px; padding: 20px;
+  background: #E8F5E9; border-radius: 16px;
+  display: flex; align-items: center; gap: 14px;
+}
+.taq-help-icon { font-size: 28px; }
+.taq-help-text { font-size: 14px; color: #2A2A2A; line-height: 1.5; }
+.taq-help-text strong { color: #5BBD72; }
+
+/* FAQ tarifs */
+.taq-faq { }
+.taq-faq-item {
+  background: #FAFAF8; border-radius: 12px; margin-bottom: 12px;
+  overflow: hidden; border: 1px solid rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s;
+}
+.taq-faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+.taq-faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 22px; cursor: pointer; gap: 14px;
+}
+.taq-faq-q h3 {
+  font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700;
+  color: #2A2A2A; flex: 1;
+}
+.taq-faq-toggle {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #FFF9F3; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 16px; color: #E8813A; font-weight: 700;
+  transition: all 0.3s;
+}
+.taq-faq-item.taq-active .taq-faq-toggle { background: #E8813A; color: white; transform: rotate(45deg); }
+.taq-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.taq-faq-a-inner { padding: 0 22px 18px; font-size: 14px; color: #5A5A6A; line-height: 1.8; }
+.taq-faq-a-inner strong { color: #2A2A2A; }
+.taq-faq-a-inner a { color: #E8813A; font-weight: 600; }
+
+@media (max-width: 900px) { .taq-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="taq">
+  <div class="taq-container">
+    <div class="taq-grid">
+
+      <!-- Démarches -->
+      <div class="taq-demarches">
+        <div class="taq-label">Vos démarches</div>
+        <h2 class="taq-title">Comment demander <span>le CMG ?</span></h2>
+        <p class="taq-text">Les démarches sont simples. Nous vous accompagnons à chaque étape pour que vous puissiez bénéficier de l'aide le plus rapidement possible.</p>
+
+        <div class="taq-steps">
+          <div class="taq-step">
+            <div class="taq-step-num">1</div>
+            <div>
+              <h4>Inscrivez votre enfant chez Les Petitous</h4>
+              <p>Complétez la pré-inscription et finalisez l'accueil avec notre équipe.</p>
+            </div>
+          </div>
+          <div class="taq-step">
+            <div class="taq-step-num">2</div>
+            <div>
+              <h4>Déclarez la garde sur caf.fr</h4>
+              <p>Connectez-vous à votre espace CAF (ou MSA) et faites la demande de CMG en ligne. Nous vous fournissons l'attestation nécessaire.</p>
+            </div>
+          </div>
+          <div class="taq-step">
+            <div class="taq-step-num">3</div>
+            <div>
+              <h4>Transmettez la facture chaque mois</h4>
+              <p>Nous vous envoyons la facture acquittée. Téléchargez-la sur votre espace CAF ou transmettez l'attestation CMG mensuelle.</p>
+            </div>
+          </div>
+          <div class="taq-step">
+            <div class="taq-step-num">4</div>
+            <div>
+              <h4>Recevez le remboursement</h4>
+              <p>La CAF vous verse le CMG directement sur votre compte bancaire chaque mois.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="taq-help">
+          <div class="taq-help-icon">🤝</div>
+          <div class="taq-help-text"><strong>On vous aide !</strong> Notre équipe vous accompagne dans toutes vos démarches administratives. N'hésitez pas à nous solliciter.</div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="taq-faq">
+        <div class="taq-label">Questions fréquentes</div>
+        <h2 class="taq-title">Vos questions sur <span>les tarifs</span></h2>
+
+        <div class="taq-faq-item">
+          <div class="taq-faq-q" onclick="taqToggle(this)">
+            <h3>Quel est le tarif horaire de vos crèches ?</h3>
+            <div class="taq-faq-toggle">+</div>
+          </div>
+          <div class="taq-faq-a"><div class="taq-faq-a-inner">Notre tarif horaire est inférieur à <strong>10€ par enfant</strong>, ce qui est la condition d'éligibilité au CMG. Le tarif exact dépend du contrat d'accueil (nombre de jours, amplitude horaire). Contactez-nous pour un devis personnalisé.</div></div>
+        </div>
+
+        <div class="taq-faq-item">
+          <div class="taq-faq-q" onclick="taqToggle(this)">
+            <h3>Peut-on payer en plusieurs fois ?</h3>
+            <div class="taq-faq-toggle">+</div>
+          </div>
+          <div class="taq-faq-a"><div class="taq-faq-a-inner">La facture est mensuelle. Vous payez en début de mois et recevez le remboursement CMG de la CAF dans les jours qui suivent votre déclaration. Le décalage est généralement d'un mois.</div></div>
+        </div>
+
+        <div class="taq-faq-item">
+          <div class="taq-faq-q" onclick="taqToggle(this)">
+            <h3>Le CMG couvre-t-il la totalité des frais ?</h3>
+            <div class="taq-faq-toggle">+</div>
+          </div>
+          <div class="taq-faq-a"><div class="taq-faq-a-inner">Non, le CMG couvre au maximum <strong>85% de la facture</strong>. Un minimum de 15% reste à votre charge. Cependant, avec le crédit d'impôt de 50% sur ce reste, le coût réel est significativement réduit.</div></div>
+        </div>
+
+        <div class="taq-faq-item">
+          <div class="taq-faq-q" onclick="taqToggle(this)">
+            <h3>Faut-il avancer les frais ?</h3>
+            <div class="taq-faq-toggle">+</div>
+          </div>
+          <div class="taq-faq-a"><div class="taq-faq-a-inner"><strong>Oui</strong>, en micro-crèche PAJE, vous avancez la totalité de la facture. La CAF vous rembourse ensuite le CMG. C'est la principale différence avec les crèches municipales (PSU) où le tarif est directement réduit.</div></div>
+        </div>
+
+        <div class="taq-faq-item">
+          <div class="taq-faq-q" onclick="taqToggle(this)">
+            <h3>Quelles autres aides existent ?</h3>
+            <div class="taq-faq-toggle">+</div>
+          </div>
+          <div class="taq-faq-a"><div class="taq-faq-a-inner">En plus du CMG et du crédit d'impôt, certains employeurs proposent des <strong>CESU préfinancés</strong> (jusqu'à 2 591€/an). Renseignez-vous auprès de votre comité d'entreprise. Certaines mairies proposent également des aides locales.</div></div>
+        </div>
+
+        <div class="taq-faq-item">
+          <div class="taq-faq-q" onclick="taqToggle(this)">
+            <h3>Mon enfant a plus de 3 ans, ai-je encore droit au CMG ?</h3>
+            <div class="taq-faq-toggle">+</div>
+          </div>
+          <div class="taq-faq-a"><div class="taq-faq-a-inner">Si votre enfant est né entre janvier et août, le CMG continue à taux plein jusqu'à la rentrée scolaire de septembre. Pour les familles monoparentales, le CMG est prolongé <strong>jusqu'aux 12 ans</strong> de l'enfant depuis septembre 2025.</div></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function taqToggle(el) {
+  var item = el.parentElement;
+  var answer = item.querySelector('.taq-faq-a');
+  var isActive = item.classList.contains('taq-active');
+  document.querySelectorAll('.taq-faq-item').forEach(function(i) {
+    i.classList.remove('taq-active');
+    i.querySelector('.taq-faq-a').style.maxHeight = '0';
+  });
+  if (!isActive) {
+    item.classList.add('taq-active');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+</script>

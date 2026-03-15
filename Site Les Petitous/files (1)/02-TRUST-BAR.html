@@ -1,0 +1,54 @@
+<!-- =====================================================
+  BLOC 2 — BARRE DE RÉASSURANCE (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+.lpt * { box-sizing: border-box; margin: 0; padding: 0; }
+.lpt {
+  font-family: 'Quicksand', sans-serif;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding: 36px 0;
+}
+.lpt-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.lpt-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.lpt-item { display: flex; align-items: center; gap: 14px; justify-content: center; }
+.lpt-icon {
+  width: 56px; height: 56px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; flex-shrink: 0;
+}
+.lpt-icon-o { background: #FFF0E0; }
+.lpt-icon-g { background: #E8F5E9; }
+.lpt-label { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px; color: #2A2A2A; line-height: 1.3; }
+.lpt-sub { font-size: 13px; color: #8A8A9A; line-height: 1.4; margin-top: 2px; }
+@media (max-width: 768px) { .lpt-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+@media (max-width: 480px) { .lpt-inner { grid-template-columns: 1fr; } .lpt-item { justify-content: flex-start; padding-left: 16px; } }
+</style>
+
+<section class="lpt">
+  <div class="lpt-container">
+    <div class="lpt-inner">
+      <div class="lpt-item">
+        <div class="lpt-icon lpt-icon-o">👫</div>
+        <div><div class="lpt-label">14 enfants max</div><div class="lpt-sub">Accueil à taille humaine</div></div>
+      </div>
+      <div class="lpt-item">
+        <div class="lpt-icon lpt-icon-g">🎓</div>
+        <div><div class="lpt-label">Équipe diplômée</div><div class="lpt-sub">Professionnels qualifiés</div></div>
+      </div>
+      <div class="lpt-item">
+        <div class="lpt-icon lpt-icon-o">🕐</div>
+        <div><div class="lpt-label">7h30 – 19h00</div><div class="lpt-sub">Du lundi au vendredi</div></div>
+      </div>
+      <div class="lpt-item">
+        <div class="lpt-icon lpt-icon-g">💶</div>
+        <div><div class="lpt-label">Aides CAF</div><div class="lpt-sub">CMG & crédit d'impôt</div></div>
+      </div>
+    </div>
+  </div>
+</section>

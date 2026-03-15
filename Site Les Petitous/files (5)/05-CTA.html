@@ -1,0 +1,65 @@
+<!-- =====================================================
+  PAGE TARIFS & AIDES — BLOC 5 : CTA FINAL
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.taf * { box-sizing: border-box; margin: 0; padding: 0; }
+.taf { font-family: 'Quicksand', sans-serif; }
+.taf a { text-decoration: none; }
+.taf-section {
+  background: linear-gradient(135deg, #E8813A 0%, #F5A623 100%);
+  padding: 100px 0; position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .taf-section { padding: 64px 0; } }
+.taf-section::before {
+  content: ''; position: absolute; top: -40%; right: -15%;
+  width: 500px; height: 500px;
+  background: rgba(255,255,255,0.08); border-radius: 50%;
+}
+.taf-container { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+.taf-inner { text-align: center; }
+.taf-inner h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(26px, 4vw, 40px); font-weight: 800;
+  color: white; margin-bottom: 16px; line-height: 1.2;
+}
+.taf-inner p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.7; }
+.taf-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.taf-btn-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 18px 36px;
+  background: white; color: #E8813A;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+}
+.taf-btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+.taf-btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: 2px solid rgba(255,255,255,0.4); cursor: pointer; border-radius: 60px; padding: 16px 34px;
+  background: transparent; color: white;
+  transition: all 0.35s ease;
+}
+.taf-btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: white; }
+.taf-note { margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.6); }
+</style>
+
+<section class="taf">
+  <div class="taf-section">
+    <div class="taf-container">
+      <div class="taf-inner">
+        <h2>Besoin d'un devis personnalisé ? 🦒</h2>
+        <p>Contactez-nous avec vos besoins (nombre de jours, horaires) et nous vous envoyons une simulation détaillée de votre reste à charge.</p>
+        <div class="taf-buttons">
+          <a href="/pre-inscription/" class="taf-btn-white">Demander un devis</a>
+          <a href="https://www.caf.fr/simulateur" target="_blank" rel="noopener" class="taf-btn-ghost">Simuler mon CMG</a>
+        </div>
+        <p class="taf-note">Devis gratuit et sans engagement · Réponse sous 48h</p>
+      </div>
+    </div>
+  </div>
+</section>

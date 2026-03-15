@@ -1,0 +1,88 @@
+<!-- =====================================================
+  BLOC 10 — FOOTER (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.lpfo * { box-sizing: border-box; margin: 0; padding: 0; }
+.lpfo { font-family: 'Quicksand', sans-serif; }
+.lpfo a { text-decoration: none; }
+.lpfo-section {
+  background: #2A2A2A;
+  color: rgba(255,255,255,0.7);
+  padding: 64px 0 32px;
+  font-size: 15px; line-height: 1.7;
+}
+.lpfo-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.lpfo-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.lpfo-brand { font-size: 15px; line-height: 1.8; margin-top: 16px; max-width: 300px; color: rgba(255,255,255,0.6); }
+.lpfo-title { font-family: 'Nunito', sans-serif; font-weight: 700; color: white; font-size: 16px; margin-bottom: 20px; }
+.lpfo-links { list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0; }
+.lpfo-links a { color: rgba(255,255,255,0.6); font-size: 15px; transition: color 0.3s; }
+.lpfo-links a:hover { color: #F5A623; }
+.lpfo-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 28px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 14px; color: rgba(255,255,255,0.5);
+}
+.lpfo-bottom a { color: rgba(255,255,255,0.5); }
+.lpfo-bottom a:hover { color: white; }
+.lpfo-legal { display: flex; gap: 24px; }
+@media (max-width: 900px) { .lpfo-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) {
+  .lpfo-grid { grid-template-columns: 1fr; }
+  .lpfo-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+
+<footer class="lpfo">
+  <div class="lpfo-section">
+    <div class="lpfo-container">
+      <div class="lpfo-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 28px;">🦒</span>
+            <span style="font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 22px; color: white;">Les <span style="color: #F5A623;">Petitous</span></span>
+          </div>
+          <p class="lpfo-brand">Un réseau de micro-crèches bienveillantes en Île-de-France où chaque enfant grandit à son rythme, entouré de professionnels passionnés.</p>
+        </div>
+        <div>
+          <div class="lpfo-title">Nos crèches</div>
+          <ul class="lpfo-links">
+            <li><a href="/nos-creches/villemomble/">Villemomble (93)</a></li>
+            <li><a href="/nos-creches/juvisy-sur-orge/">Juvisy-sur-Orge (91)</a></li>
+            <li><a href="/nos-creches/kremlin-bicetre/">Kremlin-Bicêtre (94)</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="lpfo-title">Informations</div>
+          <ul class="lpfo-links">
+            <li><a href="#lp-about">Qui sommes-nous</a></li>
+            <li><a href="#lp-values">Notre pédagogie</a></li>
+            <li><a href="/tarifs-aides-financieres/">Tarifs & Aides</a></li>
+            <li><a href="#lp-faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="lpfo-title">Contact</div>
+          <ul class="lpfo-links">
+            <li><a href="mailto:contact@lespetitous.fr">contact@lespetitous.fr</a></li>
+            <li><a href="tel:+33100000000">01 00 00 00 00</a></li>
+            <li><a href="https://instagram.com/lespetitous" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com/lespetitous" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lpfo-bottom">
+        <span>© 2026 Les Petitous — Tous droits réservés</span>
+        <div class="lpfo-legal">
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/politique-de-confidentialite/">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

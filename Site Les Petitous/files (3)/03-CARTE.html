@@ -1,0 +1,124 @@
+<!-- =====================================================
+  PAGE NOS CRÈCHES — BLOC 3 : CARTE VUE D'ENSEMBLE
+  Widget Elementor : HTML
+  
+  Carte interactive montrant les 3 crèches en Île-de-France
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.ncm * { box-sizing: border-box; margin: 0; padding: 0; }
+.ncm { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; }
+@media (max-width: 768px) { .ncm { padding: 64px 0; } }
+.ncm-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.ncm-center { text-align: center; margin-bottom: 48px; }
+.ncm-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.ncm-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.ncm-title span { color: #E8813A; }
+.ncm-subtitle { font-size: 17px; color: #5A5A6A; max-width: 550px; margin: 0 auto; }
+
+.ncm-map-wrap {
+  border-radius: 24px; overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  background: white;
+}
+.ncm-map {
+  width: 100%; height: 450px; background: #F0EDE8;
+}
+.ncm-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.ncm-map-placeholder {
+  width: 100%; height: 450px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: #8A8A9A; font-size: 14px; text-align: center; padding: 24px;
+}
+.ncm-map-placeholder span { font-size: 56px; display: block; margin-bottom: 16px; }
+
+/* Location legend below map */
+.ncm-legend {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+.ncm-legend-item {
+  padding: 20px 24px;
+  display: flex; align-items: center; gap: 14px;
+  border-right: 1px solid rgba(0,0,0,0.05);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.ncm-legend-item:last-child { border-right: none; }
+.ncm-legend-item:hover { background: #FFF9F3; }
+.ncm-legend-dot {
+  width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0;
+}
+.ncm-legend-dot-green { background: #5BBD72; }
+.ncm-legend-dot-orange { background: #E8813A; }
+.ncm-legend-name { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px; color: #2A2A2A; }
+.ncm-legend-dept { font-size: 13px; color: #8A8A9A; }
+.ncm-legend-status { font-size: 12px; font-weight: 700; margin-left: auto; }
+.ncm-legend-status-open { color: #5BBD72; }
+.ncm-legend-status-soon { color: #E8813A; }
+
+@media (max-width: 768px) {
+  .ncm-legend { grid-template-columns: 1fr; }
+  .ncm-legend-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .ncm-legend-item:last-child { border-bottom: none; }
+}
+</style>
+
+<section class="ncm">
+  <div class="ncm-container">
+    <div class="ncm-center">
+      <div class="ncm-label">Nos implantations</div>
+      <h2 class="ncm-title">3 crèches en <span>Île-de-France</span></h2>
+      <p class="ncm-subtitle">Un réseau qui grandit pour être toujours plus proche des familles franciliennes.</p>
+    </div>
+
+    <div class="ncm-map-wrap">
+      <div class="ncm-map">
+        <!--
+          REMPLACE par ton iframe Google Maps avec les 3 points :
+          1. Va sur Google My Maps (mymaps.google.com)
+          2. Crée une carte avec tes 3 adresses
+          3. Partage > Intégrer > Copie l'iframe
+          
+          OU utilise une iframe Google Maps simple centrée sur l'Île-de-France :
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
+        -->
+        <div class="ncm-map-placeholder">
+          <span>🗺️</span>
+          Intègre ici ta carte Google Maps avec les 3 crèches.<br>
+          Utilise Google My Maps pour créer une carte personnalisée.
+        </div>
+      </div>
+
+      <div class="ncm-legend">
+        <a href="/nos-creches/villemomble/" class="ncm-legend-item" style="text-decoration:none;">
+          <div class="ncm-legend-dot ncm-legend-dot-green"></div>
+          <div>
+            <div class="ncm-legend-name">Villemomble</div>
+            <div class="ncm-legend-dept">Seine-Saint-Denis (93)</div>
+          </div>
+          <div class="ncm-legend-status ncm-legend-status-open">Ouvert</div>
+        </a>
+        <a href="/nos-creches/juvisy-sur-orge/" class="ncm-legend-item" style="text-decoration:none;">
+          <div class="ncm-legend-dot ncm-legend-dot-orange"></div>
+          <div>
+            <div class="ncm-legend-name">Juvisy-sur-Orge</div>
+            <div class="ncm-legend-dept">Essonne (91)</div>
+          </div>
+          <div class="ncm-legend-status ncm-legend-status-soon">Bientôt</div>
+        </a>
+        <a href="/nos-creches/kremlin-bicetre/" class="ncm-legend-item" style="text-decoration:none;">
+          <div class="ncm-legend-dot ncm-legend-dot-orange"></div>
+          <div>
+            <div class="ncm-legend-name">Kremlin-Bicêtre</div>
+            <div class="ncm-legend-dept">Val-de-Marne (94)</div>
+          </div>
+          <div class="ncm-legend-status ncm-legend-status-soon">Bientôt</div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

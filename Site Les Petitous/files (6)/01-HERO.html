@@ -1,0 +1,95 @@
+<!-- =====================================================
+  PAGE PRÉ-INSCRIPTION — BLOC 1 : HERO
+  Widget Elementor : HTML
+  
+  Title SEO : Pré-inscription micro-crèche | Les Petitous Île-de-France
+  Meta desc : Pré-inscrivez votre enfant dans une micro-crèche Les Petitous. Formulaire en ligne, gratuit, sans engagement. Réponse sous 48h. 3 crèches en Île-de-France.
+  URL : /pre-inscription/
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+.pih * { box-sizing: border-box; margin: 0; padding: 0; }
+.pih { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; }
+.pih a { text-decoration: none; color: inherit; }
+
+.pih-hero {
+  background: linear-gradient(160deg, #FFF9F3 0%, #FFFFFF 50%, #E8F5E9 100%);
+  padding: 100px 0 60px;
+  position: relative; overflow: hidden;
+}
+.pih-hero::before {
+  content: ''; position: absolute; top: -15%; right: -8%;
+  width: 500px; height: 500px;
+  background: rgba(91,189,114,0.08); border-radius: 50%; filter: blur(80px);
+}
+.pih-hero::after {
+  content: ''; position: absolute; bottom: -10%; left: -5%;
+  width: 350px; height: 350px;
+  background: rgba(232,129,58,0.06); border-radius: 50%; filter: blur(60px);
+}
+.pih-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+.pih-bc {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: #8A8A9A; margin-bottom: 32px;
+}
+.pih-bc a { color: #5A5A6A; transition: color 0.3s; }
+.pih-bc a:hover { color: #E8813A; }
+.pih-bc-sep { color: #CACACA; }
+.pih-bc-current { color: #E8813A; font-weight: 600; }
+
+.pih-center { text-align: center; max-width: 700px; margin: 0 auto; }
+.pih-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 16px; }
+.pih-hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(32px, 4.5vw, 50px);
+  font-weight: 800; line-height: 1.15;
+  color: #2A2A2A; margin-bottom: 20px;
+}
+.pih-hero h1 span { color: #E8813A; }
+.pih-text { font-size: 18px; color: #5A5A6A; line-height: 1.8; margin-bottom: 36px; }
+
+/* Reassurance pills */
+.pih-pills {
+  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px;
+}
+.pih-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; padding: 12px 22px; border-radius: 60px;
+  font-size: 15px; font-weight: 600; color: #2A2A2A;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.pih-pill-check { color: #5BBD72; font-size: 18px; }
+
+@media (max-width: 600px) {
+  .pih-pills { flex-direction: column; align-items: center; }
+}
+</style>
+
+<section class="pih pih-hero">
+  <div class="pih-container">
+
+    <nav class="pih-bc">
+      <a href="/">Accueil</a>
+      <span class="pih-bc-sep">›</span>
+      <span class="pih-bc-current">Pré-inscription</span>
+    </nav>
+
+    <div class="pih-center">
+      <div class="pih-label">Pré-inscription</div>
+      <h1>Pré-inscrivez votre enfant <span>en quelques minutes</span></h1>
+      <p class="pih-text">Remplissez le formulaire ci-dessous et notre équipe vous recontacte sous 48h pour organiser une visite et finaliser l'inscription de votre enfant.</p>
+
+      <div class="pih-pills">
+        <div class="pih-pill"><span class="pih-pill-check">✓</span> Gratuit</div>
+        <div class="pih-pill"><span class="pih-pill-check">✓</span> Sans engagement</div>
+        <div class="pih-pill"><span class="pih-pill-check">✓</span> Réponse sous 48h</div>
+        <div class="pih-pill"><span class="pih-pill-check">✓</span> Données sécurisées</div>
+      </div>
+    </div>
+
+  </div>
+</section>

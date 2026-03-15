@@ -1,0 +1,45 @@
+<!-- =====================================================
+  BLOC 9 — CTA FINAL
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : transparent (le dégradé est dans le CSS)
+    - Padding haut/bas : 100px desktop / 64px mobile
+===================================================== -->
+
+<style>
+.lp-cta {
+  background: linear-gradient(135deg, var(--lp-orange) 0%, var(--lp-orange-light) 100%);
+  padding: 100px 0;
+  position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .lp-cta { padding: 64px 0; } }
+.lp-cta::before {
+  content: '';
+  position: absolute; top: -50%; right: -20%;
+  width: 600px; height: 600px;
+  background: rgba(255,255,255,0.08); border-radius: 50%;
+}
+.lp-cta::after {
+  content: '';
+  position: absolute; bottom: -30%; left: -10%;
+  width: 400px; height: 400px;
+  background: rgba(255,255,255,0.05); border-radius: 50%;
+}
+.lp-cta-inner { text-align: center; position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
+.lp-cta h2 {
+  font-family: var(--lp-font-display);
+  font-size: clamp(28px, 4vw, 42px); font-weight: 800;
+  color: white; margin-bottom: 16px; line-height: 1.2;
+}
+.lp-cta p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 36px; }
+</style>
+
+<section class="lp-block lp-cta" id="lp-contact">
+  <div class="lp-container">
+    <div class="lp-cta-inner">
+      <h2 class="lp-reveal">Une place en crèche, ça se prépare tôt 🦒</h2>
+      <p class="lp-reveal lp-delay-1">Pré-inscription gratuite et sans engagement. Notre équipe vous recontacte sous 48h.</p>
+      <a href="/pre-inscription/" class="lp-btn lp-btn-white lp-reveal lp-delay-2">Pré-inscrire mon enfant</a>
+    </div>
+  </div>
+</section>

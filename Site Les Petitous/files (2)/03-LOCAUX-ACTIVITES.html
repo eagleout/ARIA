@@ -1,0 +1,154 @@
+<!-- =====================================================
+  PAGE ÉTABLISSEMENT — BLOC 3 : NOS LOCAUX & ACTIVITÉS
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.epl * { box-sizing: border-box; margin: 0; padding: 0; }
+.epl { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; }
+@media (max-width: 768px) { .epl { padding: 64px 0; } }
+.epl-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.epl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+
+.epl-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.epl-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 20px; }
+.epl-title span { color: #E8813A; }
+.epl-text { font-size: 16px; color: #5A5A6A; line-height: 1.8; margin-bottom: 24px; }
+
+/* Spaces list */
+.epl-spaces { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.epl-space {
+  display: flex; align-items: center; gap: 16px;
+  background: white; padding: 16px 20px; border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.epl-space:hover { transform: translateX(4px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.epl-space-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.epl-space-icon-1 { background: #FFF0E0; }
+.epl-space-icon-2 { background: #E8F5E9; }
+.epl-space-icon-3 { background: #E3F2FD; }
+.epl-space-icon-4 { background: #F3E8FF; }
+.epl-space-icon-5 { background: #FFF0E0; }
+.epl-space-name { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px; color: #2A2A2A; }
+.epl-space-desc { font-size: 13px; color: #8A8A9A; }
+
+/* Activities */
+.epl-activities { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.epl-activity {
+  background: white; border-radius: 16px; padding: 24px;
+  text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.epl-activity:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
+.epl-activity-icon { font-size: 36px; margin-bottom: 12px; display: block; }
+.epl-activity h4 { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700; color: #2A2A2A; margin-bottom: 6px; }
+.epl-activity p { font-size: 13px; color: #5A5A6A; line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .epl-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 480px) {
+  .epl-activities { grid-template-columns: 1fr; }
+}
+</style>
+
+<section class="epl">
+  <div class="epl-container">
+    <div class="epl-grid">
+
+      <!-- COLONNE GAUCHE : Les locaux -->
+      <div>
+        <div class="epl-label">Nos locaux</div>
+        <h2 class="epl-title">Un espace pensé pour <span>l'éveil</span></h2>
+        <p class="epl-text">Notre micro-crèche de Villemomble dispose d'un espace de 150 m² entièrement aménagé pour le confort et la sécurité des tout-petits. Chaque zone a été conçue pour favoriser l'exploration et le développement de votre enfant.</p>
+
+        <div class="epl-spaces">
+          <div class="epl-space">
+            <div class="epl-space-icon epl-space-icon-1">🧸</div>
+            <div>
+              <div class="epl-space-name">Espace de vie principal</div>
+              <div class="epl-space-desc">Grand espace lumineux pour les activités quotidiennes et le jeu libre</div>
+            </div>
+          </div>
+          <div class="epl-space">
+            <div class="epl-space-icon epl-space-icon-2">😴</div>
+            <div>
+              <div class="epl-space-name">Salle de sieste</div>
+              <div class="epl-space-desc">Espace calme et tamisé, lits individuels adaptés à chaque enfant</div>
+            </div>
+          </div>
+          <div class="epl-space">
+            <div class="epl-space-icon epl-space-icon-3">🍽️</div>
+            <div>
+              <div class="epl-space-name">Coin repas & cuisine</div>
+              <div class="epl-space-desc">Repas faits maison, produits frais et de saison, menus équilibrés</div>
+            </div>
+          </div>
+          <div class="epl-space">
+            <div class="epl-space-icon epl-space-icon-4">🎨</div>
+            <div>
+              <div class="epl-space-name">Atelier créatif</div>
+              <div class="epl-space-desc">Peinture, pâte à modeler, collage et activités sensorielles</div>
+            </div>
+          </div>
+          <div class="epl-space">
+            <div class="epl-space-icon epl-space-icon-5">🌿</div>
+            <div>
+              <div class="epl-space-name">Espace extérieur</div>
+              <div class="epl-space-desc">Petit jardin sécurisé pour les activités en plein air</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLONNE DROITE : Les activités -->
+      <div>
+        <div class="epl-label">Nos activités</div>
+        <h2 class="epl-title">Apprendre en <span>s'amusant</span></h2>
+        <p class="epl-text">Chaque journée est rythmée par des activités variées, adaptées à l'âge et aux centres d'intérêt de chaque enfant. Nos professionnelles proposent un programme riche pour éveiller la curiosité.</p>
+
+        <div class="epl-activities">
+          <div class="epl-activity">
+            <span class="epl-activity-icon">🎵</span>
+            <h4>Éveil musical</h4>
+            <p>Comptines, instruments, rythmes et découverte sonore</p>
+          </div>
+          <div class="epl-activity">
+            <span class="epl-activity-icon">🎨</span>
+            <h4>Arts plastiques</h4>
+            <p>Peinture, collage, modelage et création libre</p>
+          </div>
+          <div class="epl-activity">
+            <span class="epl-activity-icon">📚</span>
+            <h4>Lecture & Langage</h4>
+            <p>Histoires, imagiers, marionnettes et jeux de mots</p>
+          </div>
+          <div class="epl-activity">
+            <span class="epl-activity-icon">🤸</span>
+            <h4>Motricité</h4>
+            <p>Parcours moteurs, danse, yoga bébé et jeux d'équilibre</p>
+          </div>
+          <div class="epl-activity">
+            <span class="epl-activity-icon">🌱</span>
+            <h4>Nature & Jardinage</h4>
+            <p>Plantation, observation, jeux d'eau et bac sensoriel</p>
+          </div>
+          <div class="epl-activity">
+            <span class="epl-activity-icon">🧩</span>
+            <h4>Jeux éducatifs</h4>
+            <p>Puzzles, encastrements, tri de couleurs et formes</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

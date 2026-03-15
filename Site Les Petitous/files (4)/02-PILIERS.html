@@ -1,0 +1,102 @@
+<!-- =====================================================
+  PAGE PÉDAGOGIE — BLOC 2 : NOS 5 PILIERS
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.pdp * { box-sizing: border-box; margin: 0; padding: 0; }
+.pdp { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+@media (max-width: 768px) { .pdp { padding: 64px 0; } }
+.pdp-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.pdp-center { text-align: center; margin-bottom: 56px; }
+.pdp-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.pdp-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.pdp-title span { color: #E8813A; }
+.pdp-subtitle { font-size: 17px; color: #5A5A6A; max-width: 600px; margin: 0 auto; }
+
+.pdp-pillars { display: flex; flex-direction: column; gap: 24px; }
+
+.pdp-pillar {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 28px; align-items: center;
+  background: #FAFAF8; border-radius: 24px; padding: 36px 40px;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.pdp-pillar:hover { transform: translateX(6px); box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+
+.pdp-pillar-num {
+  width: 72px; height: 72px; border-radius: 22px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Nunito', sans-serif; font-size: 28px; font-weight: 800;
+  flex-shrink: 0;
+}
+.pdp-pn1 { background: #FFF0E0; color: #E8813A; }
+.pdp-pn2 { background: #E8F5E9; color: #5BBD72; }
+.pdp-pn3 { background: #E3F2FD; color: #4A90D9; }
+.pdp-pn4 { background: #F3E8FF; color: #9B59B6; }
+.pdp-pn5 { background: #FFF0E0; color: #E8813A; }
+
+.pdp-pillar h3 { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800; color: #2A2A2A; margin-bottom: 6px; }
+.pdp-pillar p { font-size: 15px; color: #5A5A6A; line-height: 1.7; max-width: 700px; }
+
+@media (max-width: 600px) {
+  .pdp-pillar { grid-template-columns: 1fr; text-align: center; justify-items: center; padding: 28px 24px; }
+}
+</style>
+
+<section class="pdp">
+  <div class="pdp-container">
+    <div class="pdp-center">
+      <div class="pdp-label">Nos fondements</div>
+      <h2 class="pdp-title">Les 5 piliers de <span>notre pédagogie</span></h2>
+      <p class="pdp-subtitle">Chaque journée aux Petitous est guidée par ces principes qui assurent le développement harmonieux de votre enfant.</p>
+    </div>
+
+    <div class="pdp-pillars">
+
+      <div class="pdp-pillar">
+        <div class="pdp-pillar-num pdp-pn1">01</div>
+        <div>
+          <h3>Le respect du rythme de l'enfant</h3>
+          <p>Chaque enfant a son propre tempo. Nous adaptons les temps de repos, de repas et d'activités aux besoins individuels de chacun, sans forcer ni brusquer. Le sommeil, l'alimentation et les apprentissages suivent le rythme naturel de votre enfant.</p>
+        </div>
+      </div>
+
+      <div class="pdp-pillar">
+        <div class="pdp-pillar-num pdp-pn2">02</div>
+        <div>
+          <h3>L'autonomie et la libre exploration</h3>
+          <p>Inspirés par l'approche Montessori, nous aménageons des espaces sécurisés où l'enfant peut explorer, manipuler et découvrir par lui-même. L'adulte accompagne sans diriger, encourageant la confiance en soi et l'initiative personnelle.</p>
+        </div>
+      </div>
+
+      <div class="pdp-pillar">
+        <div class="pdp-pillar-num pdp-pn3">03</div>
+        <div>
+          <h3>L'éveil sensoriel et créatif</h3>
+          <p>Toucher, voir, entendre, sentir, goûter : les 5 sens sont sollicités chaque jour à travers des ateliers variés. Peinture, musique, jeux d'eau, pâte à modeler, jardinage… Chaque activité est pensée pour éveiller la curiosité naturelle.</p>
+        </div>
+      </div>
+
+      <div class="pdp-pillar">
+        <div class="pdp-pillar-num pdp-pn4">04</div>
+        <div>
+          <h3>La socialisation et le vivre-ensemble</h3>
+          <p>La micro-crèche est le premier lieu de socialisation de votre enfant. Avec 14 enfants maximum, les interactions sont riches et encadrées. L'enfant apprend à partager, à communiquer, à respecter les autres et à trouver sa place dans le groupe.</p>
+        </div>
+      </div>
+
+      <div class="pdp-pillar">
+        <div class="pdp-pillar-num pdp-pn5">05</div>
+        <div>
+          <h3>La co-éducation avec les parents</h3>
+          <p>Vous êtes les premiers éducateurs de votre enfant. Nous construisons une relation de confiance et de transparence avec les familles : transmissions quotidiennes, réunions régulières, journal de bord partagé. Votre voix compte dans notre projet.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

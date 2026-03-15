@@ -1,0 +1,86 @@
+<!-- =====================================================
+  BLOC 7 — TÉMOIGNAGES
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : blanc
+    - Padding haut/bas : 100px desktop / 64px mobile
+===================================================== -->
+
+<style>
+.lp-testi { background: var(--lp-white); padding: 100px 0; }
+@media (max-width: 768px) { .lp-testi { padding: 64px 0; } }
+.lp-testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+.lp-tcard {
+  background: white; border-radius: 20px; padding: 36px;
+  box-shadow: var(--lp-shadow-soft);
+  transition: all 0.3s;
+}
+.lp-tcard:hover { box-shadow: var(--lp-shadow-hover); transform: translateY(-4px); }
+.lp-tcard-quote { font-size: 40px; color: var(--lp-orange); opacity: 0.3; font-family: Georgia, serif; line-height: 1; margin-bottom: 12px; }
+.lp-tcard-stars { color: var(--lp-orange-light); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px; }
+.lp-tcard-text { font-size: 15px; color: var(--lp-text-mid); line-height: 1.8; margin-bottom: 24px; font-style: italic; }
+.lp-tcard-author { display: flex; align-items: center; gap: 12px; }
+.lp-tcard-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.lp-tcard-avatar.lp-av1 { background: var(--lp-cream-deep); }
+.lp-tcard-avatar.lp-av2 { background: var(--lp-green-light); }
+.lp-tcard-avatar.lp-av3 { background: #E3F2FD; }
+.lp-tcard-name { font-weight: 700; font-size: 15px; color: var(--lp-text-dark); }
+.lp-tcard-loc { font-size: 13px; color: var(--lp-text-light); }
+@media (max-width: 900px) {
+  .lp-testi-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+}
+</style>
+
+<section class="lp-block lp-testi" id="lp-testi">
+  <div class="lp-container">
+    <div class="lp-text-center">
+      <div class="lp-label lp-reveal">Témoignages</div>
+      <h2 class="lp-title lp-reveal">Ce que disent <span>les parents</span></h2>
+    </div>
+    <div class="lp-testi-grid">
+
+      <div class="lp-tcard lp-reveal">
+        <div class="lp-tcard-quote">"</div>
+        <div class="lp-tcard-stars">★★★★★</div>
+        <p class="lp-tcard-text">Notre fille adore y aller chaque matin. L'équipe est formidable, toujours à l'écoute. On sent vraiment que chaque enfant compte. Je recommande les yeux fermés !</p>
+        <div class="lp-tcard-author">
+          <div class="lp-tcard-avatar lp-av1">👩</div>
+          <div>
+            <div class="lp-tcard-name">Sarah M.</div>
+            <div class="lp-tcard-loc">Villemomble</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lp-tcard lp-reveal lp-delay-1">
+        <div class="lp-tcard-quote">"</div>
+        <div class="lp-tcard-stars">★★★★★</div>
+        <p class="lp-tcard-text">Le petit format de 14 enfants fait toute la différence. Mon fils est beaucoup plus épanoui depuis qu'il est chez Les Petitous. L'adaptation s'est faite en douceur.</p>
+        <div class="lp-tcard-author">
+          <div class="lp-tcard-avatar lp-av2">👨</div>
+          <div>
+            <div class="lp-tcard-name">Thomas L.</div>
+            <div class="lp-tcard-loc">Villemomble</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lp-tcard lp-reveal lp-delay-2">
+        <div class="lp-tcard-quote">"</div>
+        <div class="lp-tcard-stars">★★★★★</div>
+        <p class="lp-tcard-text">Les activités sont variées et bien pensées. On reçoit des photos chaque jour, c'est rassurant. Et les repas faits maison, un vrai plus !</p>
+        <div class="lp-tcard-author">
+          <div class="lp-tcard-avatar lp-av3">👩</div>
+          <div>
+            <div class="lp-tcard-name">Amina K.</div>
+            <div class="lp-tcard-loc">Villemomble</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

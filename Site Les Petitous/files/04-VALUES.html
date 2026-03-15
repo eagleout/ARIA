@@ -1,0 +1,68 @@
+<!-- =====================================================
+  BLOC 4 — NOS VALEURS / PÉDAGOGIE
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : #FAF3EB (sable)
+    - Padding haut/bas : 100px desktop / 64px mobile
+===================================================== -->
+
+<style>
+.lp-values {
+  background: var(--lp-sand); padding: 100px 0;
+  position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .lp-values { padding: 64px 0; } }
+.lp-values::before {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 300px; height: 300px;
+  background: var(--lp-orange-glow); border-radius: 50%; filter: blur(80px);
+}
+.lp-values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+.lp-vcard {
+  background: white; border-radius: 20px; padding: 40px 32px;
+  text-align: center; box-shadow: var(--lp-shadow-soft);
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  position: relative; overflow: hidden;
+}
+.lp-vcard::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--lp-orange), var(--lp-orange-light));
+  transform: scaleX(0); transition: transform 0.4s;
+}
+.lp-vcard:hover::before { transform: scaleX(1); }
+.lp-vcard:hover { transform: translateY(-8px); box-shadow: var(--lp-shadow-hover); }
+.lp-vcard-emoji { font-size: 48px; margin-bottom: 20px; display: block; }
+.lp-vcard h3 { font-family: var(--lp-font-display); font-size: 22px; font-weight: 800; color: var(--lp-text-dark); margin-bottom: 12px; }
+.lp-vcard p { font-size: 15px; color: var(--lp-text-mid); line-height: 1.7; }
+@media (max-width: 768px) {
+  .lp-values-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+}
+</style>
+
+<section class="lp-block lp-values" id="lp-values">
+  <div class="lp-container">
+    <div class="lp-text-center">
+      <div class="lp-label lp-reveal">Notre pédagogie</div>
+      <h2 class="lp-title lp-reveal">Pourquoi les parents nous font <span>confiance</span></h2>
+      <p class="lp-subtitle lp-mx-auto lp-reveal">Chaque crèche Les Petitous offre un cadre bienveillant où votre enfant développe son plein potentiel.</p>
+    </div>
+    <div class="lp-values-grid">
+      <div class="lp-vcard lp-reveal">
+        <span class="lp-vcard-emoji">🤗</span>
+        <h3>Bienveillance</h3>
+        <p>Chaque enfant est accueilli avec douceur et attention. Nos équipes respectent le rythme de chacun pour favoriser son bien-être et son développement harmonieux.</p>
+      </div>
+      <div class="lp-vcard lp-reveal lp-delay-1">
+        <span class="lp-vcard-emoji">🎨</span>
+        <h3>Éveil & Créativité</h3>
+        <p>Des activités sensorielles, artistiques et motrices adaptées à chaque âge. Jeux, découvertes et expériences pour stimuler la curiosité et l'autonomie.</p>
+      </div>
+      <div class="lp-vcard lp-reveal lp-delay-2">
+        <span class="lp-vcard-emoji">🤝</span>
+        <h3>Confiance & Transparence</h3>
+        <p>Une relation de confiance avec les familles grâce à une communication quotidienne. Les parents sont informés et impliqués à chaque étape.</p>
+      </div>
+    </div>
+  </div>
+</section>

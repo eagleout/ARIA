@@ -1,0 +1,57 @@
+<!-- =====================================================
+  BLOC 9 — CTA FINAL (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.lpct * { box-sizing: border-box; margin: 0; padding: 0; }
+.lpct { font-family: 'Quicksand', sans-serif; }
+.lpct a { text-decoration: none; }
+.lpct-section {
+  background: linear-gradient(135deg, #E8813A 0%, #F5A623 100%);
+  padding: 100px 0;
+  position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .lpct-section { padding: 64px 0; } }
+.lpct-section::before {
+  content: ''; position: absolute; top: -50%; right: -20%;
+  width: 600px; height: 600px;
+  background: rgba(255,255,255,0.08); border-radius: 50%;
+}
+.lpct-section::after {
+  content: ''; position: absolute; bottom: -30%; left: -10%;
+  width: 400px; height: 400px;
+  background: rgba(255,255,255,0.05); border-radius: 50%;
+}
+.lpct-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.lpct-inner { text-align: center; position: relative; z-index: 2; max-width: 600px; margin: 0 auto; }
+.lpct-inner h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(28px, 4vw, 42px); font-weight: 800;
+  color: white; margin-bottom: 16px; line-height: 1.2;
+}
+.lpct-inner p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 36px; line-height: 1.7; }
+.lpct-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 18px 40px;
+  background: white; color: #E8813A;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: all 0.35s ease; text-decoration: none;
+}
+.lpct-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+</style>
+
+<section class="lpct">
+  <div class="lpct-section">
+    <div class="lpct-container">
+      <div class="lpct-inner">
+        <h2>Une place en crèche, ça se prépare tôt 🦒</h2>
+        <p>Pré-inscription gratuite et sans engagement. Notre équipe vous recontacte sous 48h.</p>
+        <a href="/pre-inscription/" class="lpct-btn">Pré-inscrire mon enfant</a>
+      </div>
+    </div>
+  </div>
+</section>

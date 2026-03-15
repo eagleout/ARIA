@@ -1,0 +1,129 @@
+<!-- =====================================================
+  PAGE ÉTABLISSEMENT — BLOC 5 : TÉMOIGNAGES LOCAUX
+  Widget Elementor : HTML
+  
+  PERSONNALISER : Remplacer par de vrais avis parents
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.ept * { box-sizing: border-box; margin: 0; padding: 0; }
+.ept { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; }
+@media (max-width: 768px) { .ept { padding: 64px 0; } }
+.ept-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.ept-center { text-align: center; }
+.ept-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.ept-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.ept-title span { color: #E8813A; }
+.ept-subtitle { font-size: 17px; color: #5A5A6A; max-width: 500px; margin: 0 auto 16px; }
+
+/* Google rating banner */
+.ept-google {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: white; padding: 12px 24px; border-radius: 60px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05); margin-bottom: 48px;
+}
+.ept-google-stars { color: #F5A623; font-size: 18px; letter-spacing: 2px; }
+.ept-google-rating { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 20px; color: #2A2A2A; }
+.ept-google-count { font-size: 14px; color: #8A8A9A; }
+
+.ept-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+
+.ept-card {
+  background: white; border-radius: 20px; padding: 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+.ept-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+.ept-card-stars { color: #F5A623; font-size: 14px; margin-bottom: 14px; letter-spacing: 1px; }
+.ept-card-text { font-size: 15px; color: #5A5A6A; line-height: 1.8; margin-bottom: 20px; font-style: italic; }
+.ept-card-author { display: flex; align-items: center; gap: 12px; }
+.ept-card-av {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 700; color: white;
+}
+.ept-av1 { background: #E8813A; }
+.ept-av2 { background: #5BBD72; }
+.ept-av3 { background: #4A90D9; }
+.ept-av4 { background: #9B59B6; }
+.ept-card-name { font-weight: 700; font-size: 15px; color: #2A2A2A; }
+.ept-card-date { font-size: 12px; color: #8A8A9A; }
+
+/* CTA */
+.ept-cta {
+  text-align: center; margin-top: 40px;
+  font-size: 15px; color: #5A5A6A;
+}
+.ept-cta a {
+  color: #E8813A; font-weight: 700; text-decoration: none;
+  transition: color 0.3s;
+}
+.ept-cta a:hover { color: #D06F2A; }
+
+@media (max-width: 700px) { .ept-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="ept">
+  <div class="ept-container">
+    <div class="ept-center">
+      <div class="ept-label">Avis parents</div>
+      <h2 class="ept-title">Ce qu'ils pensent de <span>notre crèche</span></h2>
+      <p class="ept-subtitle">Les parents de Villemomble témoignent de leur expérience aux Petitous.</p>
+      <div class="ept-google">
+        <div class="ept-google-stars">★★★★★</div>
+        <div class="ept-google-rating">4.9</div>
+        <!-- REMPLACE par ton vrai nombre d'avis -->
+        <div class="ept-google-count">sur 24 avis Google</div>
+      </div>
+    </div>
+
+    <div class="ept-grid">
+      <!-- REMPLACE par de vrais témoignages -->
+
+      <div class="ept-card">
+        <div class="ept-card-stars">★★★★★</div>
+        <p class="ept-card-text">Notre fille adore y aller chaque matin. L'équipe est formidable, toujours à l'écoute. On sent vraiment que chaque enfant compte. Le petit nombre d'enfants fait toute la différence !</p>
+        <div class="ept-card-author">
+          <div class="ept-card-av ept-av1">S</div>
+          <div><div class="ept-card-name">Sarah M.</div><div class="ept-card-date">Il y a 2 mois</div></div>
+        </div>
+      </div>
+
+      <div class="ept-card">
+        <div class="ept-card-stars">★★★★★</div>
+        <p class="ept-card-text">L'adaptation s'est faite en douceur. Mon fils est beaucoup plus épanoui et sociable depuis qu'il est chez Les Petitous. Les activités sont vraiment variées et bien pensées.</p>
+        <div class="ept-card-author">
+          <div class="ept-card-av ept-av2">T</div>
+          <div><div class="ept-card-name">Thomas L.</div><div class="ept-card-date">Il y a 3 mois</div></div>
+        </div>
+      </div>
+
+      <div class="ept-card">
+        <div class="ept-card-stars">★★★★★</div>
+        <p class="ept-card-text">On reçoit des photos et un compte-rendu chaque jour, c'est très rassurant. Les repas faits maison sont un vrai plus. Merci à toute l'équipe pour leur investissement !</p>
+        <div class="ept-card-author">
+          <div class="ept-card-av ept-av3">A</div>
+          <div><div class="ept-card-name">Amina K.</div><div class="ept-card-date">Il y a 1 mois</div></div>
+        </div>
+      </div>
+
+      <div class="ept-card">
+        <div class="ept-card-stars">★★★★★</div>
+        <p class="ept-card-text">Nous cherchions une crèche à taille humaine et nous avons trouvé bien plus. L'approche pédagogique est top, ma fille progresse chaque semaine. Je recommande sans hésiter.</p>
+        <div class="ept-card-author">
+          <div class="ept-card-av ept-av4">L</div>
+          <div><div class="ept-card-name">Laura D.</div><div class="ept-card-date">Il y a 2 semaines</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ept-cta">
+      <!-- REMPLACE par ton lien Google Business -->
+      <a href="https://g.page/r/XXXXXXX/review" target="_blank" rel="noopener">Voir tous les avis sur Google →</a>
+    </div>
+
+  </div>
+</section>

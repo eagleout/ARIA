@@ -1,0 +1,68 @@
+<!-- =====================================================
+  PAGE NOS CRÈCHES — BLOC 5 : CTA FINAL
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.ncf * { box-sizing: border-box; margin: 0; padding: 0; }
+.ncf { font-family: 'Quicksand', sans-serif; }
+.ncf a { text-decoration: none; }
+
+.ncf-section {
+  background: linear-gradient(135deg, #E8813A 0%, #F5A623 100%);
+  padding: 100px 0; position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .ncf-section { padding: 64px 0; } }
+.ncf-section::before {
+  content: ''; position: absolute; top: -40%; right: -15%;
+  width: 500px; height: 500px;
+  background: rgba(255,255,255,0.08); border-radius: 50%;
+}
+.ncf-container { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+.ncf-inner { text-align: center; }
+.ncf-inner h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(26px, 4vw, 40px); font-weight: 800;
+  color: white; margin-bottom: 16px; line-height: 1.2;
+}
+.ncf-inner p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.7; }
+
+.ncf-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.ncf-btn-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 18px 36px;
+  background: white; color: #E8813A;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+}
+.ncf-btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+.ncf-btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: 2px solid rgba(255,255,255,0.4); cursor: pointer; border-radius: 60px; padding: 16px 34px;
+  background: transparent; color: white;
+  transition: all 0.35s ease;
+}
+.ncf-btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: white; transform: translateY(-2px); }
+
+.ncf-note { margin-top: 24px; font-size: 14px; color: rgba(255,255,255,0.6); }
+</style>
+
+<section class="ncf">
+  <div class="ncf-section">
+    <div class="ncf-container">
+      <div class="ncf-inner">
+        <h2>Vous n'avez pas encore trouvé votre crèche idéale ? 🦒</h2>
+        <p>Contactez-nous et nous vous aiderons à trouver l'établissement le plus adapté à votre famille et à votre localisation.</p>
+        <div class="ncf-buttons">
+          <a href="/pre-inscription/" class="ncf-btn-white">Pré-inscrire mon enfant</a>
+          <a href="/contact/" class="ncf-btn-ghost">Nous contacter</a>
+        </div>
+        <p class="ncf-note">Pré-inscription gratuite et sans engagement · Réponse sous 48h</p>
+      </div>
+    </div>
+  </div>
+</section>

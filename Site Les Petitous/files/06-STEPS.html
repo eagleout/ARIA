@@ -1,0 +1,72 @@
+<!-- =====================================================
+  BLOC 6 — 3 ÉTAPES D'INSCRIPTION
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : dégradé crème → blanc
+    - Padding haut/bas : 100px desktop / 64px mobile
+===================================================== -->
+
+<style>
+.lp-steps {
+  background: linear-gradient(160deg, var(--lp-cream) 0%, var(--lp-white) 100%);
+  padding: 100px 0;
+}
+@media (max-width: 768px) { .lp-steps { padding: 64px 0; } }
+.lp-steps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  margin-top: 56px; position: relative;
+}
+.lp-steps-grid::before {
+  content: '';
+  position: absolute; top: 44px; left: 16%; right: 16%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--lp-orange), var(--lp-green));
+  opacity: 0.2;
+}
+.lp-scard { text-align: center; position: relative; z-index: 2; }
+.lp-scard-num {
+  width: 88px; height: 88px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  font-family: var(--lp-font-display); font-size: 32px; font-weight: 800;
+  background: white; box-shadow: var(--lp-shadow-card);
+}
+.lp-scard:nth-child(1) .lp-scard-num { color: var(--lp-orange); border: 3px solid var(--lp-cream-deep); }
+.lp-scard:nth-child(2) .lp-scard-num { color: var(--lp-green); border: 3px solid var(--lp-green-light); }
+.lp-scard:nth-child(3) .lp-scard-num { color: var(--lp-orange); border: 3px solid var(--lp-cream-deep); }
+.lp-scard h3 { font-family: var(--lp-font-display); font-size: 20px; font-weight: 800; color: var(--lp-text-dark); margin-bottom: 10px; }
+.lp-scard p { font-size: 15px; color: var(--lp-text-mid); max-width: 280px; margin: 0 auto; line-height: 1.7; }
+@media (max-width: 768px) {
+  .lp-steps-grid { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .lp-steps-grid::before { display: none; }
+}
+</style>
+
+<section class="lp-block lp-steps" id="lp-steps">
+  <div class="lp-container">
+    <div class="lp-text-center">
+      <div class="lp-label lp-reveal">Comment ça marche</div>
+      <h2 class="lp-title lp-reveal">Inscrire votre enfant en <span>3 étapes</span></h2>
+    </div>
+    <div class="lp-steps-grid">
+      <div class="lp-scard lp-reveal">
+        <div class="lp-scard-num">1</div>
+        <h3>Pré-inscription en ligne</h3>
+        <p>Remplissez le formulaire en 2 minutes. Gratuit et sans engagement.</p>
+      </div>
+      <div class="lp-scard lp-reveal lp-delay-1">
+        <div class="lp-scard-num">2</div>
+        <h3>Échange personnalisé</h3>
+        <p>Notre équipe vous rappelle pour faire connaissance et répondre à vos questions.</p>
+      </div>
+      <div class="lp-scard lp-reveal lp-delay-2">
+        <div class="lp-scard-num">3</div>
+        <h3>Visite & Finalisation</h3>
+        <p>Découvrez la crèche, rencontrez l'équipe et finalisez l'inscription de votre enfant.</p>
+      </div>
+    </div>
+    <div class="lp-text-center" style="margin-top: 48px;">
+      <a href="/pre-inscription/" class="lp-btn lp-btn-primary lp-reveal">Commencer la pré-inscription</a>
+    </div>
+  </div>
+</section>

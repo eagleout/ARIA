@@ -1,0 +1,76 @@
+<!-- =====================================================
+  BLOC 7 — TÉMOIGNAGES (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.lpte * { box-sizing: border-box; margin: 0; padding: 0; }
+.lpte { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+@media (max-width: 768px) { .lpte { padding: 64px 0; } }
+.lpte-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.lpte-center { text-align: center; }
+.lpte-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.lpte-title { font-family: 'Nunito', sans-serif; font-size: clamp(32px,5vw,48px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 20px; }
+.lpte-title span { color: #E8813A; }
+.lpte-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+.lpte-card {
+  background: white; border-radius: 20px; padding: 36px;
+  box-shadow: 0 4px 24px rgba(42,42,42,0.06);
+  transition: all 0.3s ease;
+}
+.lpte-card:hover { box-shadow: 0 12px 40px rgba(42,42,42,0.12); transform: translateY(-4px); }
+.lpte-quote { font-size: 40px; color: #E8813A; opacity: 0.3; font-family: Georgia, serif; line-height: 1; margin-bottom: 12px; }
+.lpte-stars { color: #F5A623; font-size: 16px; margin-bottom: 16px; letter-spacing: 2px; }
+.lpte-text { font-size: 15px; color: #5A5A6A; line-height: 1.8; margin-bottom: 24px; font-style: italic; }
+.lpte-author { display: flex; align-items: center; gap: 12px; }
+.lpte-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.lpte-av1 { background: #FFF0E0; }
+.lpte-av2 { background: #E8F5E9; }
+.lpte-av3 { background: #E3F2FD; }
+.lpte-name { font-weight: 700; font-size: 15px; color: #2A2A2A; }
+.lpte-loc { font-size: 13px; color: #8A8A9A; }
+@media (max-width: 900px) { .lpte-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; } }
+</style>
+
+<section class="lpte">
+  <div class="lpte-container">
+    <div class="lpte-center">
+      <div class="lpte-label">Témoignages</div>
+      <h2 class="lpte-title">Ce que disent <span>les parents</span></h2>
+    </div>
+    <div class="lpte-grid">
+      <div class="lpte-card">
+        <div class="lpte-quote">"</div>
+        <div class="lpte-stars">★★★★★</div>
+        <p class="lpte-text">Notre fille adore y aller chaque matin. L'équipe est formidable, toujours à l'écoute. On sent vraiment que chaque enfant compte. Je recommande les yeux fermés !</p>
+        <div class="lpte-author">
+          <div class="lpte-avatar lpte-av1">👩</div>
+          <div><div class="lpte-name">Sarah M.</div><div class="lpte-loc">Villemomble</div></div>
+        </div>
+      </div>
+      <div class="lpte-card">
+        <div class="lpte-quote">"</div>
+        <div class="lpte-stars">★★★★★</div>
+        <p class="lpte-text">Le petit format de 14 enfants fait toute la différence. Mon fils est beaucoup plus épanoui depuis qu'il est chez Les Petitous. L'adaptation s'est faite en douceur.</p>
+        <div class="lpte-author">
+          <div class="lpte-avatar lpte-av2">👨</div>
+          <div><div class="lpte-name">Thomas L.</div><div class="lpte-loc">Villemomble</div></div>
+        </div>
+      </div>
+      <div class="lpte-card">
+        <div class="lpte-quote">"</div>
+        <div class="lpte-stars">★★★★★</div>
+        <p class="lpte-text">Les activités sont variées et bien pensées. On reçoit des photos chaque jour, c'est rassurant. Et les repas faits maison, un vrai plus !</p>
+        <div class="lpte-author">
+          <div class="lpte-avatar lpte-av3">👩</div>
+          <div><div class="lpte-name">Amina K.</div><div class="lpte-loc">Villemomble</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

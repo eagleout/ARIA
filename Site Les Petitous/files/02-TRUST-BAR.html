@@ -1,0 +1,69 @@
+<!-- =====================================================
+  BLOC 2 — BARRE DE RÉASSURANCE
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : blanc
+    - Padding haut/bas : 0
+===================================================== -->
+
+<style>
+.lp-trust {
+  background: white;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding: 32px 0;
+}
+.lp-trust-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.lp-trust-item { display: flex; align-items: center; gap: 14px; justify-content: center; }
+.lp-trust-icon {
+  width: 52px; height: 52px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+}
+.lp-trust-icon.lp-tio { background: var(--lp-cream-deep); }
+.lp-trust-icon.lp-tig { background: var(--lp-green-light); }
+.lp-trust-label { font-weight: 700; font-size: 15px; color: var(--lp-text-dark); }
+.lp-trust-sub { font-size: 13px; color: var(--lp-text-light); }
+@media (max-width: 768px) { .lp-trust-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+@media (max-width: 480px) { .lp-trust-inner { grid-template-columns: 1fr; } }
+</style>
+
+<section class="lp-block lp-trust">
+  <div class="lp-container">
+    <div class="lp-trust-inner">
+      <div class="lp-trust-item lp-reveal">
+        <div class="lp-trust-icon lp-tio">👫</div>
+        <div>
+          <div class="lp-trust-label">14 enfants max</div>
+          <div class="lp-trust-sub">Accueil à taille humaine</div>
+        </div>
+      </div>
+      <div class="lp-trust-item lp-reveal lp-delay-1">
+        <div class="lp-trust-icon lp-tig">🎓</div>
+        <div>
+          <div class="lp-trust-label">Équipe diplômée</div>
+          <div class="lp-trust-sub">Professionnels qualifiés</div>
+        </div>
+      </div>
+      <div class="lp-trust-item lp-reveal lp-delay-2">
+        <div class="lp-trust-icon lp-tio">🕐</div>
+        <div>
+          <div class="lp-trust-label">7h30 – 19h00</div>
+          <div class="lp-trust-sub">Du lundi au vendredi</div>
+        </div>
+      </div>
+      <div class="lp-trust-item lp-reveal lp-delay-3">
+        <div class="lp-trust-icon lp-tig">💶</div>
+        <div>
+          <div class="lp-trust-label">Aides CAF</div>
+          <div class="lp-trust-sub">CMG & crédit d'impôt</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

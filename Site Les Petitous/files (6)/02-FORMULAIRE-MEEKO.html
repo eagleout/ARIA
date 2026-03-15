@@ -1,0 +1,278 @@
+<!-- =====================================================
+  PAGE PRÉ-INSCRIPTION — BLOC 2 : FORMULAIRE MEEKO
+  Widget Elementor : HTML
+  
+  ⚠️ IMPORTANT — PERSONNALISATION OBLIGATOIRE :
+  
+  Tu as 2 options pour intégrer le formulaire Meeko :
+  
+  OPTION A (recommandée) — Iframe intégrée :
+  1. Connecte-toi à Meeko → Site internet → Éditer mon site
+  2. Va sur la page du formulaire de pré-inscription
+  3. Copie le lien dans la barre URL (type: https://les-petitous.meeko.site/registration)
+  4. Remplace l'URL dans l'iframe ci-dessous
+  
+  OPTION B — Bouton de redirection :
+  1. Supprime le bloc .pif-form-embed
+  2. Décommente le bloc .pif-form-button
+  3. Remplace l'URL par ton lien Meeko
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.pif * { box-sizing: border-box; margin: 0; padding: 0; }
+.pif { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 60px 0 100px; }
+@media (max-width: 768px) { .pif { padding: 40px 0 64px; } }
+.pif a { text-decoration: none; }
+.pif-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.pif-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 40px; align-items: start; }
+
+/* ===== FORMULAIRE MEEKO (OPTION A — IFRAME) ===== */
+.pif-form-embed {
+  background: white; border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.pif-form-header {
+  background: linear-gradient(135deg, #E8813A, #F5A623);
+  padding: 24px 32px;
+  color: white;
+  display: flex; align-items: center; gap: 12px;
+}
+.pif-form-header-icon { font-size: 28px; }
+.pif-form-header h2 {
+  font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800;
+}
+.pif-form-header p { font-size: 14px; opacity: 0.85; margin-top: 2px; }
+.pif-form-body { padding: 0; }
+.pif-form-body iframe {
+  width: 100%;
+  min-height: 900px;
+  border: none;
+  display: block;
+}
+
+/* Message si iframe ne charge pas */
+.pif-form-fallback {
+  padding: 48px 32px;
+  text-align: center;
+}
+.pif-form-fallback p {
+  font-size: 16px; color: #5A5A6A; margin-bottom: 24px;
+}
+.pif-form-fallback-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 18px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 18px 40px;
+  background: #5BBD72; color: white;
+  box-shadow: 0 4px 16px rgba(91,189,114,0.3);
+  transition: all 0.35s ease;
+}
+.pif-form-fallback-btn:hover { background: #4AA862; transform: translateY(-2px); }
+
+/* ===== OPTION B — BOUTON REDIRECTION (décommente si tu préfères) ===== */
+/*
+.pif-form-button {
+  background: white; border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  padding: 60px 40px; text-align: center;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.pif-form-button-icon { font-size: 64px; margin-bottom: 24px; }
+.pif-form-button h2 {
+  font-family: 'Nunito', sans-serif; font-size: 28px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 16px;
+}
+.pif-form-button p {
+  font-size: 17px; color: #5A5A6A; margin-bottom: 32px; max-width: 450px; margin-left: auto; margin-right: auto;
+}
+.pif-form-button-link {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 18px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 20px 44px;
+  background: #5BBD72; color: white;
+  box-shadow: 0 6px 20px rgba(91,189,114,0.35);
+  transition: all 0.35s ease;
+}
+.pif-form-button-link:hover { background: #4AA862; transform: translateY(-3px); box-shadow: 0 10px 28px rgba(91,189,114,0.4); }
+*/
+
+/* ===== SIDEBAR ===== */
+.pif-sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+.pif-sidebar-card {
+  background: #FAFAF8; border-radius: 20px; padding: 28px;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.pif-sidebar-card h3 {
+  font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.pif-sidebar-card h3 span { font-size: 22px; }
+
+/* Steps */
+.pif-mini-steps { display: flex; flex-direction: column; gap: 14px; }
+.pif-mini-step {
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.pif-mini-step-num {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #E8813A; color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 800;
+  flex-shrink: 0;
+}
+.pif-mini-step-text { font-size: 14px; color: #5A5A6A; line-height: 1.5; }
+.pif-mini-step-text strong { color: #2A2A2A; }
+
+/* Checklist */
+.pif-checklist { display: flex; flex-direction: column; gap: 10px; }
+.pif-checklist-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: #5A5A6A;
+}
+.pif-checklist-icon { color: #5BBD72; font-weight: 700; font-size: 16px; }
+
+/* Contact card */
+.pif-contact-card {
+  background: linear-gradient(135deg, #E8F5E9, #FFF9F3);
+  border-radius: 20px; padding: 28px;
+  border: 2px solid rgba(91,189,114,0.15);
+}
+.pif-contact-card h3 {
+  font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.pif-contact-card h3 span { font-size: 22px; }
+.pif-contact-info {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.pif-contact-line {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: #5A5A6A;
+}
+.pif-contact-line a {
+  color: #E8813A; font-weight: 600;
+}
+.pif-contact-line-icon { font-size: 18px; }
+
+@media (max-width: 900px) {
+  .pif-grid { grid-template-columns: 1fr; }
+  .pif-sidebar { order: -1; }
+}
+</style>
+
+<section class="pif">
+  <div class="pif-container">
+    <div class="pif-grid">
+
+      <!-- ===== FORMULAIRE MEEKO ===== -->
+      <div class="pif-form-embed">
+        <div class="pif-form-header">
+          <div class="pif-form-header-icon">🦒</div>
+          <div>
+            <h2>Formulaire de pré-inscription</h2>
+            <p>Remplissez les informations et nous vous recontactons</p>
+          </div>
+        </div>
+        <div class="pif-form-body">
+          <!-- 
+            ⚠️ REMPLACE l'URL ci-dessous par ton lien Meeko :
+            https://les-petitous.meeko.site/registration
+            
+            Pour trouver ton lien :
+            Meeko → Site internet → Éditer → Page pré-inscription → Copie l'URL
+          -->
+          <iframe 
+            src="https://les-petitous.meeko.site/registration" 
+            title="Formulaire de pré-inscription Les Petitous"
+            loading="lazy"
+            allow="clipboard-write"
+          ></iframe>
+
+          <!-- Si l'iframe ne fonctionne pas, ce lien apparaît -->
+          <noscript>
+            <div class="pif-form-fallback">
+              <p>Le formulaire nécessite JavaScript. Cliquez ci-dessous pour accéder directement au formulaire.</p>
+              <a href="https://les-petitous.meeko.site/registration" target="_blank" rel="noopener" class="pif-form-fallback-btn">Ouvrir le formulaire →</a>
+            </div>
+          </noscript>
+        </div>
+      </div>
+
+      <!-- ===== SIDEBAR ===== -->
+      <div class="pif-sidebar">
+
+        <!-- Comment ça marche -->
+        <div class="pif-sidebar-card">
+          <h3><span>📋</span> Comment ça marche</h3>
+          <div class="pif-mini-steps">
+            <div class="pif-mini-step">
+              <div class="pif-mini-step-num">1</div>
+              <div class="pif-mini-step-text"><strong>Remplissez le formulaire</strong><br>Informations de votre enfant, planning souhaité</div>
+            </div>
+            <div class="pif-mini-step">
+              <div class="pif-mini-step-num">2</div>
+              <div class="pif-mini-step-text"><strong>On vous rappelle</strong><br>Échange téléphonique sous 48h pour faire connaissance</div>
+            </div>
+            <div class="pif-mini-step">
+              <div class="pif-mini-step-num">3</div>
+              <div class="pif-mini-step-text"><strong>Visite de la crèche</strong><br>Découvrez les locaux et rencontrez l'équipe</div>
+            </div>
+            <div class="pif-mini-step">
+              <div class="pif-mini-step-num">4</div>
+              <div class="pif-mini-step-text"><strong>Finalisation</strong><br>Signature du contrat et début de l'adaptation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ce qu'il vous faut -->
+        <div class="pif-sidebar-card">
+          <h3><span>📎</span> Pour remplir le formulaire</h3>
+          <div class="pif-checklist">
+            <div class="pif-checklist-item"><span class="pif-checklist-icon">✓</span> Prénom et date de naissance de l'enfant</div>
+            <div class="pif-checklist-item"><span class="pif-checklist-icon">✓</span> Vos coordonnées (email, téléphone)</div>
+            <div class="pif-checklist-item"><span class="pif-checklist-icon">✓</span> Date d'entrée souhaitée</div>
+            <div class="pif-checklist-item"><span class="pif-checklist-icon">✓</span> Planning souhaité (jours et horaires)</div>
+          </div>
+        </div>
+
+        <!-- Nos crèches -->
+        <div class="pif-sidebar-card">
+          <h3><span>📍</span> Nos crèches disponibles</h3>
+          <div class="pif-checklist">
+            <div class="pif-checklist-item"><span style="color:#5BBD72;font-size:10px;">●</span> <strong>Villemomble (93)</strong> — Places disponibles</div>
+            <div class="pif-checklist-item"><span style="color:#E8813A;font-size:10px;">●</span> <strong>Juvisy-sur-Orge (91)</strong> — Ouverture prochaine</div>
+            <div class="pif-checklist-item"><span style="color:#E8813A;font-size:10px;">●</span> <strong>Kremlin-Bicêtre (94)</strong> — Ouverture prochaine</div>
+          </div>
+        </div>
+
+        <!-- Contact direct -->
+        <div class="pif-contact-card">
+          <h3><span>💬</span> Une question ?</h3>
+          <div class="pif-contact-info">
+            <div class="pif-contact-line">
+              <span class="pif-contact-line-icon">📞</span>
+              <!-- REMPLACE par ton vrai numéro -->
+              <a href="tel:+33100000000">01 00 00 00 00</a>
+            </div>
+            <div class="pif-contact-line">
+              <span class="pif-contact-line-icon">✉️</span>
+              <a href="mailto:contact@lespetitous.fr">contact@lespetitous.fr</a>
+            </div>
+            <div class="pif-contact-line" style="margin-top:4px; font-size:13px; color:#8A8A9A;">
+              Du lundi au vendredi, 8h – 18h
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

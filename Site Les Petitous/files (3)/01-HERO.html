@@ -1,0 +1,114 @@
+<!-- =====================================================
+  PAGE NOS CRÈCHES — BLOC 1 : HERO
+  Widget Elementor : HTML
+  
+  Title SEO : Nos micro-crèches en Île-de-France | Les Petitous
+  Meta desc : Découvrez les micro-crèches Les Petitous en Île-de-France : Villemomble (93), Juvisy-sur-Orge (91), Kremlin-Bicêtre (94). 14 enfants max, aide CAF. Réservez une visite.
+  URL : /nos-creches/
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+.nch * { box-sizing: border-box; margin: 0; padding: 0; }
+.nch { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; }
+.nch a { text-decoration: none; }
+
+.nch-hero {
+  background: linear-gradient(160deg, #FFF9F3 0%, #FFFFFF 50%, #E8F5E9 100%);
+  padding: 100px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.nch-hero::before {
+  content: '';
+  position: absolute; top: -15%; right: -10%;
+  width: 500px; height: 500px;
+  background: rgba(232,129,58,0.08);
+  border-radius: 50%; filter: blur(80px);
+}
+.nch-hero::after {
+  content: '';
+  position: absolute; bottom: -10%; left: -5%;
+  width: 350px; height: 350px;
+  background: rgba(91,189,114,0.06);
+  border-radius: 50%; filter: blur(60px);
+}
+.nch-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+/* Breadcrumb */
+.nch-bc {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; font-size: 14px; color: #8A8A9A; margin-bottom: 32px;
+}
+.nch-bc a { color: #5A5A6A; transition: color 0.3s; }
+.nch-bc a:hover { color: #E8813A; }
+.nch-bc-sep { color: #CACACA; }
+.nch-bc-current { color: #E8813A; font-weight: 600; }
+
+.nch-label {
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 16px;
+}
+.nch-hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 800; line-height: 1.15;
+  color: #2A2A2A; margin-bottom: 20px;
+}
+.nch-hero h1 span { color: #E8813A; }
+.nch-hero-sub {
+  font-size: 19px; color: #5A5A6A;
+  max-width: 650px; margin: 0 auto 36px;
+  line-height: 1.8;
+}
+
+/* Stats bar */
+.nch-stats {
+  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+  padding: 32px 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+.nch-stat-num {
+  font-family: 'Nunito', sans-serif;
+  font-size: 40px; font-weight: 800; color: #E8813A;
+  line-height: 1;
+}
+.nch-stat-lbl { font-size: 14px; color: #8A8A9A; font-weight: 600; margin-top: 6px; }
+
+@media (max-width: 480px) { .nch-stats { gap: 32px; } }
+</style>
+
+<section class="nch nch-hero">
+  <div class="nch-container">
+
+    <nav class="nch-bc">
+      <a href="/">Accueil</a>
+      <span class="nch-bc-sep">›</span>
+      <span class="nch-bc-current">Nos crèches</span>
+    </nav>
+
+    <div class="nch-label">Nos établissements</div>
+    <h1>Trouvez la crèche Les Petitous <span>près de chez vous</span></h1>
+    <p class="nch-hero-sub">Notre réseau de micro-crèches en Île-de-France accueille les enfants de 10 semaines à 3 ans dans des structures à taille humaine, limitées à 14 enfants.</p>
+
+    <div class="nch-stats">
+      <div>
+        <div class="nch-stat-num">3</div>
+        <div class="nch-stat-lbl">Établissements</div>
+      </div>
+      <div>
+        <div class="nch-stat-num">14</div>
+        <div class="nch-stat-lbl">Enfants max / crèche</div>
+      </div>
+      <div>
+        <div class="nch-stat-num">4.9<span style="font-size:20px;color:#F5A623;">/5</span></div>
+        <div class="nch-stat-lbl">Avis parents</div>
+      </div>
+    </div>
+
+  </div>
+</section>

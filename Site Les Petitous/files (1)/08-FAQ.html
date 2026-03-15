@@ -1,0 +1,131 @@
+<!-- =====================================================
+  BLOC 8 — FAQ (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.lpf * { box-sizing: border-box; margin: 0; padding: 0; }
+.lpf { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; }
+@media (max-width: 768px) { .lpf { padding: 64px 0; } }
+.lpf-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.lpf-center { text-align: center; }
+.lpf-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.lpf-title { font-family: 'Nunito', sans-serif; font-size: clamp(32px,5vw,48px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 20px; }
+.lpf-title span { color: #E8813A; }
+.lpf-list { max-width: 760px; margin: 48px auto 0; }
+.lpf-item {
+  background: white; border-radius: 12px; margin-bottom: 12px;
+  overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s;
+}
+.lpf-item:hover { box-shadow: 0 4px 24px rgba(42,42,42,0.06); }
+.lpf-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 28px; cursor: pointer; gap: 16px;
+  background: none; border: none; width: 100%; text-align: left;
+  font-family: 'Quicksand', sans-serif;
+}
+.lpf-q h3 {
+  font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 700;
+  color: #2A2A2A; flex: 1; margin: 0;
+}
+.lpf-toggle {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: #FFF9F3;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: all 0.3s;
+  font-size: 18px; color: #E8813A; font-weight: 700;
+}
+.lpf-item.lpf-active .lpf-toggle {
+  background: #E8813A; color: white; transform: rotate(45deg);
+}
+.lpf-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.lpf-a-inner {
+  padding: 0 28px 24px;
+  font-size: 15px; color: #5A5A6A; line-height: 1.8;
+}
+.lpf-a-inner strong { color: #2A2A2A; }
+</style>
+
+<section class="lpf" id="lp-faq">
+  <div class="lpf-container">
+    <div class="lpf-center">
+      <div class="lpf-label">Questions fréquentes</div>
+      <h2 class="lpf-title">Tout ce que vous devez <span>savoir</span></h2>
+    </div>
+    <div class="lpf-list">
+
+      <div class="lpf-item">
+        <div class="lpf-q" onclick="lpfToggle(this)">
+          <h3>À partir de quel âge puis-je inscrire mon enfant ?</h3>
+          <div class="lpf-toggle">+</div>
+        </div>
+        <div class="lpf-a">
+          <div class="lpf-a-inner">Nos micro-crèches accueillent les enfants dès l'âge de <strong>10 semaines</strong> jusqu'à l'entrée en maternelle (environ 3 ans). L'accueil peut être à temps plein ou à temps partiel, selon vos besoins et les disponibilités.</div>
+        </div>
+      </div>
+
+      <div class="lpf-item">
+        <div class="lpf-q" onclick="lpfToggle(this)">
+          <h3>Quelles aides financières sont disponibles ?</h3>
+          <div class="lpf-toggle">+</div>
+        </div>
+        <div class="lpf-a">
+          <div class="lpf-a-inner">Vous pouvez bénéficier du <strong>Complément de libre choix du Mode de Garde (CMG)</strong> versé par la CAF, ainsi que du <strong>crédit d'impôt</strong> de 50% sur les frais de garde. Certains employeurs proposent aussi des aides via le CESU. Nous vous accompagnons dans toutes vos démarches.</div>
+        </div>
+      </div>
+
+      <div class="lpf-item">
+        <div class="lpf-q" onclick="lpfToggle(this)">
+          <h3>Comment se passe une journée type en crèche ?</h3>
+          <div class="lpf-toggle">+</div>
+        </div>
+        <div class="lpf-a">
+          <div class="lpf-a-inner">La journée est rythmée par des temps d'accueil, d'activités d'éveil (motricité, arts plastiques, musique, lecture), de repas équilibrés préparés sur place, de sieste et de jeux libres. Chaque moment est adapté au rythme de votre enfant.</div>
+        </div>
+      </div>
+
+      <div class="lpf-item">
+        <div class="lpf-q" onclick="lpfToggle(this)">
+          <h3>Quelle est la différence avec une crèche classique ?</h3>
+          <div class="lpf-toggle">+</div>
+        </div>
+        <div class="lpf-a">
+          <div class="lpf-a-inner">La micro-crèche accueille au maximum <strong>14 enfants</strong> contre 60 à 80 en crèche municipale. Ce format permet un accompagnement bien plus personnalisé, un meilleur ratio adulte/enfant, et un climat familial et rassurant pour les tout-petits.</div>
+        </div>
+      </div>
+
+      <div class="lpf-item">
+        <div class="lpf-q" onclick="lpfToggle(this)">
+          <h3>Comment fonctionne la période d'adaptation ?</h3>
+          <div class="lpf-toggle">+</div>
+        </div>
+        <div class="lpf-a">
+          <div class="lpf-a-inner">L'adaptation se fait progressivement sur <strong>1 à 2 semaines</strong>. Votre enfant découvre la crèche d'abord avec vous, puis par périodes de plus en plus longues sans vous. Nous respectons le rythme de chaque enfant pour que cette transition se fasse en toute sérénité.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function lpfToggle(el) {
+  var item = el.parentElement;
+  var answer = item.querySelector('.lpf-a');
+  var isActive = item.classList.contains('lpf-active');
+  document.querySelectorAll('.lpf-item').forEach(function(i) {
+    i.classList.remove('lpf-active');
+    i.querySelector('.lpf-a').style.maxHeight = '0';
+  });
+  if (!isActive) {
+    item.classList.add('lpf-active');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+</script>

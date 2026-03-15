@@ -1,0 +1,160 @@
+<!-- =====================================================
+  PAGE PÉDAGOGIE — BLOC 3 : UNE JOURNÉE TYPE
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.pdj * { box-sizing: border-box; margin: 0; padding: 0; }
+.pdj { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; }
+@media (max-width: 768px) { .pdj { padding: 64px 0; } }
+.pdj-container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+.pdj-center { text-align: center; margin-bottom: 56px; }
+.pdj-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.pdj-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.pdj-title span { color: #E8813A; }
+.pdj-subtitle { font-size: 17px; color: #5A5A6A; max-width: 550px; margin: 0 auto; }
+
+/* Timeline */
+.pdj-timeline { position: relative; padding-left: 48px; }
+.pdj-timeline::before {
+  content: ''; position: absolute; left: 19px; top: 0; bottom: 0;
+  width: 3px; background: linear-gradient(180deg, #E8813A, #5BBD72);
+  border-radius: 3px;
+}
+
+.pdj-item {
+  position: relative; margin-bottom: 32px;
+  background: white; border-radius: 20px; padding: 28px 32px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+.pdj-item:last-child { margin-bottom: 0; }
+.pdj-item:hover { transform: translateX(6px); box-shadow: 0 8px 28px rgba(0,0,0,0.07); }
+
+/* Dot on timeline */
+.pdj-item::before {
+  content: '';
+  position: absolute; left: -37px; top: 32px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: white; border: 3px solid #E8813A;
+  z-index: 2;
+}
+.pdj-item:nth-child(even)::before { border-color: #5BBD72; }
+
+.pdj-item-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.pdj-time {
+  font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 800;
+  color: white; padding: 4px 14px; border-radius: 60px;
+  white-space: nowrap;
+}
+.pdj-item:nth-child(odd) .pdj-time { background: #E8813A; }
+.pdj-item:nth-child(even) .pdj-time { background: #5BBD72; }
+
+.pdj-item-title { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 800; color: #2A2A2A; }
+.pdj-item-icon { font-size: 24px; }
+.pdj-item p { font-size: 15px; color: #5A5A6A; line-height: 1.7; }
+
+@media (max-width: 600px) {
+  .pdj-timeline { padding-left: 36px; }
+  .pdj-timeline::before { left: 13px; }
+  .pdj-item::before { left: -31px; width: 12px; height: 12px; }
+  .pdj-item { padding: 20px 20px; }
+}
+</style>
+
+<section class="pdj">
+  <div class="pdj-container">
+    <div class="pdj-center">
+      <div class="pdj-label">Au quotidien</div>
+      <h2 class="pdj-title">Une journée type <span>aux Petitous</span></h2>
+      <p class="pdj-subtitle">Chaque moment de la journée est pensé pour respecter le rythme de votre enfant tout en stimulant son éveil.</p>
+    </div>
+
+    <div class="pdj-timeline">
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">7h30 – 9h30</div>
+          <div class="pdj-item-icon">🌅</div>
+        </div>
+        <div class="pdj-item-title">Accueil & Jeux libres</div>
+        <p>Arrivée échelonnée, transmissions avec les parents. Les enfants retrouvent leurs repères, jouent librement et se réveillent à leur rythme dans un cadre rassurant.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">9h30 – 10h00</div>
+          <div class="pdj-item-icon">🥐</div>
+        </div>
+        <div class="pdj-item-title">Collation & Regroupement</div>
+        <p>Petit moment convivial autour d'un fruit ou d'une compote. On chante les comptines du matin, on dit bonjour à chacun. Le rituel rassure et structure la journée.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">10h00 – 11h15</div>
+          <div class="pdj-item-icon">🎨</div>
+        </div>
+        <div class="pdj-item-title">Activités d'éveil</div>
+        <p>Le cœur de la matinée ! Peinture, pâte à modeler, éveil musical, parcours moteur, lecture, jardinage… Les activités changent chaque jour et sont adaptées aux différentes tranches d'âge.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">11h15 – 11h30</div>
+          <div class="pdj-item-icon">🧹</div>
+        </div>
+        <div class="pdj-item-title">Temps calme & Préparation</div>
+        <p>Retour au calme, rangement participatif, change et lavage des mains. Les enfants sont progressivement guidés vers le repas.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">11h30 – 12h30</div>
+          <div class="pdj-item-icon">🍽️</div>
+        </div>
+        <div class="pdj-item-title">Déjeuner fait maison</div>
+        <p>Repas équilibré préparé sur place avec des produits frais et de saison. Les enfants découvrent les saveurs, mangent à leur rythme et développent leur autonomie à table.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">12h30 – 15h00</div>
+          <div class="pdj-item-icon">😴</div>
+        </div>
+        <div class="pdj-item-title">Sieste</div>
+        <p>Chaque enfant dort dans son propre lit, dans une salle calme et tamisée. Le réveil est échelonné et respecte le besoin de sommeil de chacun — pas de réveil imposé.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">15h00 – 15h30</div>
+          <div class="pdj-item-icon">🍎</div>
+        </div>
+        <div class="pdj-item-title">Goûter</div>
+        <p>Collation de l'après-midi : fruits, compote, biscuit. Un moment de partage et de convivialité après la sieste.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">15h30 – 17h00</div>
+          <div class="pdj-item-icon">🧩</div>
+        </div>
+        <div class="pdj-item-title">Activités libres & Jeux</div>
+        <p>Jeux libres, lecture, dessin, exploration ou activités en extérieur quand la météo le permet. L'après-midi est plus souple et laisse place à l'initiative de chaque enfant.</p>
+      </div>
+
+      <div class="pdj-item">
+        <div class="pdj-item-head">
+          <div class="pdj-time">17h00 – 19h00</div>
+          <div class="pdj-item-icon">🏠</div>
+        </div>
+        <div class="pdj-item-title">Départs & Transmissions</div>
+        <p>Les parents récupèrent leur enfant à leur rythme. L'équipe transmet le compte-rendu de la journée : repas, sieste, activités, humeur. Vous savez tout !</p>
+      </div>
+
+    </div>
+  </div>
+</section>

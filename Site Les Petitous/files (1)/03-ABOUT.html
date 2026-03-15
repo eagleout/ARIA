@@ -1,0 +1,91 @@
+<!-- =====================================================
+  BLOC 3 — QUI SOMMES-NOUS (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.lpa * { box-sizing: border-box; margin: 0; padding: 0; }
+.lpa { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 100px 0; }
+.lpa a { text-decoration: none; }
+@media (max-width: 768px) { .lpa { padding: 64px 0; } }
+.lpa-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.lpa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.lpa-img-wrap { position: relative; }
+.lpa-img {
+  width: 100%; aspect-ratio: 4/3; border-radius: 32px;
+  background: linear-gradient(135deg, #FFF9F3 0%, #FFF0E0 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 120px; position: relative; overflow: hidden;
+}
+.lpa-badge {
+  position: absolute; bottom: -20px; right: -20px;
+  background: #5BBD72; color: white;
+  padding: 20px 28px; border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(42,42,42,0.08); text-align: center;
+}
+.lpa-badge-num { font-family: 'Nunito', sans-serif; font-size: 32px; font-weight: 800; }
+.lpa-badge-txt { font-size: 13px; font-weight: 600; opacity: 0.9; }
+.lpa-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.lpa-title { font-family: 'Nunito', sans-serif; font-size: clamp(32px,5vw,48px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 20px; }
+.lpa-title span { color: #E8813A; }
+.lpa-subtitle { font-size: 18px; color: #5A5A6A; max-width: 600px; line-height: 1.7; margin-bottom: 28px; }
+.lpa-features { display: flex; flex-direction: column; gap: 20px; margin: 32px 0; }
+.lpa-feat { display: flex; align-items: flex-start; gap: 14px; }
+.lpa-feat-icon {
+  width: 28px; height: 28px; border-radius: 50%; background: #E8F5E9;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px; color: #5BBD72; font-size: 14px; font-weight: 700;
+}
+.lpa-feat-text { font-size: 16px; color: #5A5A6A; line-height: 1.6; }
+.lpa-feat-text strong { color: #2A2A2A; }
+.lpa-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 16px 36px;
+  background: #5BBD72; color: white;
+  box-shadow: 0 4px 16px rgba(91,189,114,0.3);
+  transition: all 0.35s ease; text-decoration: none;
+}
+.lpa-btn:hover { background: #4AA862; transform: translateY(-2px); }
+@media (max-width: 900px) { .lpa-grid { grid-template-columns: 1fr; gap: 40px; } }
+</style>
+
+<section class="lpa" id="lp-about">
+  <div class="lpa-container">
+    <div class="lpa-grid">
+      <div class="lpa-img-wrap">
+        <div class="lpa-img">🧸</div>
+        <div class="lpa-badge">
+          <div class="lpa-badge-num">14</div>
+          <div class="lpa-badge-txt">enfants maximum<br>par structure</div>
+        </div>
+      </div>
+      <div>
+        <div class="lpa-label">Qui sommes-nous</div>
+        <h2 class="lpa-title">Un réseau de crèches pensé pour <span>chaque enfant</span></h2>
+        <p class="lpa-subtitle">Les crèches Les Petitous accueillent les enfants dès 10 semaines jusqu'à l'entrée en maternelle, dans un environnement sécurisé, chaleureux et adapté à leurs besoins.</p>
+        <div class="lpa-features">
+          <div class="lpa-feat">
+            <div class="lpa-feat-icon">✓</div>
+            <div class="lpa-feat-text"><strong>Éveil sensoriel et moteur</strong> — Activités quotidiennes adaptées à chaque tranche d'âge pour stimuler la curiosité naturelle</div>
+          </div>
+          <div class="lpa-feat">
+            <div class="lpa-feat-icon">✓</div>
+            <div class="lpa-feat-text"><strong>Accompagnement individualisé</strong> — Un suivi personnalisé respectant le rythme et les besoins de chaque enfant</div>
+          </div>
+          <div class="lpa-feat">
+            <div class="lpa-feat-icon">✓</div>
+            <div class="lpa-feat-text"><strong>Communication transparente</strong> — Les parents sont informés chaque jour via notre application de suivi dédiée</div>
+          </div>
+          <div class="lpa-feat">
+            <div class="lpa-feat-icon">✓</div>
+            <div class="lpa-feat-text"><strong>Repas faits maison</strong> — Menus équilibrés préparés sur place avec des produits frais et de saison</div>
+          </div>
+        </div>
+        <a href="/pre-inscription/" class="lpa-btn">Réserver une visite</a>
+      </div>
+    </div>
+  </div>
+</section>

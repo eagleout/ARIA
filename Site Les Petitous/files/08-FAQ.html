@@ -1,0 +1,128 @@
+<!-- =====================================================
+  BLOC 8 — FAQ
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : #FAF3EB (sable)
+    - Padding haut/bas : 100px desktop / 64px mobile
+  
+  NOTE SEO : Cette FAQ génère automatiquement du Schema FAQPage
+  si tu utilises Rank Math. Sinon, ajoute le schema manuellement.
+===================================================== -->
+
+<style>
+.lp-faq { background: var(--lp-sand); padding: 100px 0; }
+@media (max-width: 768px) { .lp-faq { padding: 64px 0; } }
+.lp-faq-list { max-width: 760px; margin: 48px auto 0; }
+.lp-faq-item {
+  background: white; border-radius: 12px; margin-bottom: 12px;
+  overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s;
+}
+.lp-faq-item:hover { box-shadow: var(--lp-shadow-soft); }
+.lp-faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 28px; cursor: pointer; gap: 16px;
+}
+.lp-faq-q h3 {
+  font-family: var(--lp-font-display); font-size: 17px; font-weight: 700;
+  color: var(--lp-text-dark); flex: 1; margin: 0;
+}
+.lp-faq-toggle {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--lp-cream);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: all 0.3s;
+  font-size: 18px; color: var(--lp-orange);
+}
+.lp-faq-item.lp-faq-active .lp-faq-toggle {
+  background: var(--lp-orange); color: white; transform: rotate(45deg);
+}
+.lp-faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.lp-faq-a-inner {
+  padding: 0 28px 24px;
+  font-size: 15px; color: var(--lp-text-mid); line-height: 1.8;
+}
+</style>
+
+<section class="lp-block lp-faq" id="lp-faq">
+  <div class="lp-container">
+    <div class="lp-text-center">
+      <div class="lp-label lp-reveal">Questions fréquentes</div>
+      <h2 class="lp-title lp-reveal">Tout ce que vous devez <span>savoir</span></h2>
+    </div>
+    <div class="lp-faq-list">
+
+      <div class="lp-faq-item lp-reveal">
+        <div class="lp-faq-q" onclick="lpToggleFaq(this)">
+          <h3>À partir de quel âge puis-je inscrire mon enfant ?</h3>
+          <div class="lp-faq-toggle">+</div>
+        </div>
+        <div class="lp-faq-a">
+          <div class="lp-faq-a-inner">Nos micro-crèches accueillent les enfants dès l'âge de <strong>10 semaines</strong> jusqu'à l'entrée en maternelle (environ 3 ans). L'accueil peut être à temps plein ou à temps partiel, selon vos besoins et les disponibilités.</div>
+        </div>
+      </div>
+
+      <div class="lp-faq-item lp-reveal lp-delay-1">
+        <div class="lp-faq-q" onclick="lpToggleFaq(this)">
+          <h3>Quelles aides financières sont disponibles ?</h3>
+          <div class="lp-faq-toggle">+</div>
+        </div>
+        <div class="lp-faq-a">
+          <div class="lp-faq-a-inner">Vous pouvez bénéficier du <strong>Complément de libre choix du Mode de Garde (CMG)</strong> versé par la CAF, ainsi que du <strong>crédit d'impôt</strong> de 50% sur les frais de garde. Certains employeurs proposent aussi des aides via le CESU. Nous vous accompagnons dans toutes vos démarches.</div>
+        </div>
+      </div>
+
+      <div class="lp-faq-item lp-reveal lp-delay-2">
+        <div class="lp-faq-q" onclick="lpToggleFaq(this)">
+          <h3>Comment se passe une journée type en crèche ?</h3>
+          <div class="lp-faq-toggle">+</div>
+        </div>
+        <div class="lp-faq-a">
+          <div class="lp-faq-a-inner">La journée est rythmée par des temps d'accueil, d'activités d'éveil (motricité, arts plastiques, musique, lecture), de repas équilibrés préparés sur place, de sieste et de jeux libres. Chaque moment est adapté au rythme de votre enfant.</div>
+        </div>
+      </div>
+
+      <div class="lp-faq-item lp-reveal lp-delay-3">
+        <div class="lp-faq-q" onclick="lpToggleFaq(this)">
+          <h3>Quelle est la différence avec une crèche classique ?</h3>
+          <div class="lp-faq-toggle">+</div>
+        </div>
+        <div class="lp-faq-a">
+          <div class="lp-faq-a-inner">La micro-crèche accueille au maximum <strong>14 enfants</strong> contre 60 à 80 en crèche municipale. Ce format permet un accompagnement bien plus personnalisé, un meilleur ratio adulte/enfant, et un climat familial et rassurant pour les tout-petits.</div>
+        </div>
+      </div>
+
+      <div class="lp-faq-item lp-reveal lp-delay-4">
+        <div class="lp-faq-q" onclick="lpToggleFaq(this)">
+          <h3>Comment fonctionne la période d'adaptation ?</h3>
+          <div class="lp-faq-toggle">+</div>
+        </div>
+        <div class="lp-faq-a">
+          <div class="lp-faq-a-inner">L'adaptation se fait progressivement sur <strong>1 à 2 semaines</strong>. Votre enfant découvre la crèche d'abord avec vous, puis par périodes de plus en plus longues sans vous. Nous respectons le rythme de chaque enfant pour que cette transition se fasse en toute sérénité.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function lpToggleFaq(el) {
+  var item = el.parentElement;
+  var answer = item.querySelector('.lp-faq-a');
+  var isActive = item.classList.contains('lp-faq-active');
+  
+  document.querySelectorAll('.lp-faq-item').forEach(function(i) {
+    i.classList.remove('lp-faq-active');
+    i.querySelector('.lp-faq-a').style.maxHeight = '0';
+  });
+  
+  if (!isActive) {
+    item.classList.add('lp-faq-active');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+</script>

@@ -1,0 +1,94 @@
+<!-- =====================================================
+  BLOC 3 — QUI SOMMES-NOUS
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : blanc
+    - Padding haut/bas : 100px desktop / 64px mobile
+===================================================== -->
+
+<style>
+.lp-about { background: var(--lp-white); padding: 100px 0; }
+@media (max-width: 768px) { .lp-about { padding: 64px 0; } }
+.lp-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.lp-about-img-wrap { position: relative; }
+.lp-about-img {
+  width: 100%; aspect-ratio: 4/3;
+  border-radius: 32px;
+  background: linear-gradient(135deg, var(--lp-cream) 0%, var(--lp-cream-deep) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 120px;
+  position: relative; overflow: hidden;
+}
+/* 
+  REMPLACE le emoji par ta vraie photo :
+  - Supprime le 🧸 
+  - Ajoute : <img src="/wp-content/uploads/photo-creche.jpg" alt="Enfants jouant dans la micro-crèche Les Petitous" style="width:100%;height:100%;object-fit:cover;border-radius:32px;">
+*/
+.lp-about-img::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E8813A' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.lp-about-badge {
+  position: absolute; bottom: -20px; right: -20px;
+  background: var(--lp-green); color: white;
+  padding: 20px 28px; border-radius: 20px;
+  box-shadow: var(--lp-shadow-card); text-align: center;
+}
+.lp-about-badge-num { font-family: var(--lp-font-display); font-size: 32px; font-weight: 800; }
+.lp-about-badge-txt { font-size: 13px; font-weight: 600; opacity: 0.9; }
+
+.lp-about-features { display: flex; flex-direction: column; gap: 20px; margin: 32px 0; }
+.lp-about-feat { display: flex; align-items: flex-start; gap: 14px; }
+.lp-about-feat-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--lp-green-light);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+  color: var(--lp-green); font-size: 14px; font-weight: 700;
+}
+.lp-about-feat-text { font-size: 16px; color: var(--lp-text-mid); line-height: 1.6; }
+.lp-about-feat-text strong { color: var(--lp-text-dark); }
+
+@media (max-width: 900px) {
+  .lp-about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+</style>
+
+<section class="lp-block lp-about" id="lp-about">
+  <div class="lp-container">
+    <div class="lp-about-grid">
+      <div class="lp-about-img-wrap lp-reveal">
+        <div class="lp-about-img">🧸</div>
+        <div class="lp-about-badge">
+          <div class="lp-about-badge-num">14</div>
+          <div class="lp-about-badge-txt">enfants maximum<br>par structure</div>
+        </div>
+      </div>
+      <div class="lp-about-content">
+        <div class="lp-label lp-reveal">Qui sommes-nous</div>
+        <h2 class="lp-title lp-reveal">Un réseau de crèches pensé pour <span>chaque enfant</span></h2>
+        <p class="lp-subtitle lp-reveal" style="margin-bottom: 28px;">Les crèches Les Petitous accueillent les enfants dès 10 semaines jusqu'à l'entrée en maternelle, dans un environnement sécurisé, chaleureux et adapté à leurs besoins.</p>
+        <div class="lp-about-features">
+          <div class="lp-about-feat lp-reveal lp-delay-1">
+            <div class="lp-about-feat-icon">✓</div>
+            <div class="lp-about-feat-text"><strong>Éveil sensoriel et moteur</strong> — Activités quotidiennes adaptées à chaque tranche d'âge pour stimuler la curiosité naturelle</div>
+          </div>
+          <div class="lp-about-feat lp-reveal lp-delay-2">
+            <div class="lp-about-feat-icon">✓</div>
+            <div class="lp-about-feat-text"><strong>Accompagnement individualisé</strong> — Un suivi personnalisé respectant le rythme et les besoins de chaque enfant</div>
+          </div>
+          <div class="lp-about-feat lp-reveal lp-delay-3">
+            <div class="lp-about-feat-icon">✓</div>
+            <div class="lp-about-feat-text"><strong>Communication transparente</strong> — Les parents sont informés chaque jour via notre application de suivi dédiée</div>
+          </div>
+          <div class="lp-about-feat lp-reveal lp-delay-4">
+            <div class="lp-about-feat-icon">✓</div>
+            <div class="lp-about-feat-text"><strong>Repas faits maison</strong> — Menus équilibrés préparés sur place avec des produits frais et de saison</div>
+          </div>
+        </div>
+        <a href="/pre-inscription/" class="lp-btn lp-btn-primary lp-reveal">Réserver une visite</a>
+      </div>
+    </div>
+  </div>
+</section>

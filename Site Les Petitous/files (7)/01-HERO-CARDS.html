@@ -1,0 +1,222 @@
+<!-- =====================================================
+  PAGE CONTACT — BLOC 1 : HERO + CARTES CONTACT
+  Widget Elementor : HTML
+  
+  Title SEO : Contact | Micro-crèche Les Petitous Île-de-France
+  Meta desc : Contactez les micro-crèches Les Petitous : Villemomble (93), Juvisy (91), Kremlin-Bicêtre (94). Téléphone, email, horaires. Réponse sous 48h.
+  URL : /contact/
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+.cth * { box-sizing: border-box; margin: 0; padding: 0; }
+.cth { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; }
+.cth a { text-decoration: none; color: inherit; }
+
+.cth-hero {
+  background: linear-gradient(160deg, #FFF9F3 0%, #FFFFFF 50%, #E8F5E9 100%);
+  padding: 100px 0 80px;
+  position: relative; overflow: hidden;
+}
+.cth-hero::before {
+  content: ''; position: absolute; top: -12%; right: -8%;
+  width: 450px; height: 450px;
+  background: rgba(232,129,58,0.08); border-radius: 50%; filter: blur(80px);
+}
+.cth-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+.cth-bc {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: #8A8A9A; margin-bottom: 32px;
+}
+.cth-bc a { color: #5A5A6A; transition: color 0.3s; }
+.cth-bc a:hover { color: #E8813A; }
+.cth-bc-sep { color: #CACACA; }
+.cth-bc-current { color: #E8813A; font-weight: 600; }
+
+.cth-center { text-align: center; max-width: 650px; margin: 0 auto 56px; }
+.cth-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 16px; }
+.cth-hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(32px, 4.5vw, 50px);
+  font-weight: 800; line-height: 1.15;
+  color: #2A2A2A; margin-bottom: 16px;
+}
+.cth-hero h1 span { color: #E8813A; }
+.cth-text { font-size: 18px; color: #5A5A6A; line-height: 1.8; }
+
+/* Contact cards grid */
+.cth-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.cth-card {
+  background: white; border-radius: 24px; padding: 36px 28px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+  display: flex; flex-direction: column;
+}
+.cth-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+
+.cth-card-head {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 20px; padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.cth-card-icon {
+  width: 52px; height: 52px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+}
+.cth-ci1 { background: #FFF0E0; }
+.cth-ci2 { background: #E8F5E9; }
+.cth-ci3 { background: #E3F2FD; }
+.cth-card-city { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800; color: #2A2A2A; }
+.cth-card-dept { font-size: 13px; color: #8A8A9A; }
+.cth-card-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 60px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  margin-top: 4px; width: fit-content;
+}
+.cth-status-open { background: #E8F5E9; color: #4AA862; }
+.cth-status-soon { background: #FFF0E0; color: #E8813A; }
+.cth-status-dot { width: 6px; height: 6px; border-radius: 50%; }
+.cth-status-open .cth-status-dot { background: #5BBD72; }
+.cth-status-soon .cth-status-dot { background: #E8813A; }
+
+.cth-card-info { display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.cth-card-line { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #5A5A6A; }
+.cth-card-line-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.cth-card-line a { color: #E8813A; font-weight: 600; transition: color 0.3s; }
+.cth-card-line a:hover { color: #D06F2A; }
+
+.cth-card-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-top: auto; padding-top: 20px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px;
+  border: 2px solid #E8813A; border-radius: 60px; padding: 12px 24px;
+  color: #E8813A; background: transparent;
+  cursor: pointer; transition: all 0.3s ease;
+  width: 100%; text-align: center; margin-top: 24px;
+}
+.cth-card-btn:hover { background: #E8813A; color: white; }
+
+@media (max-width: 900px) { .cth-cards { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; } }
+</style>
+
+<section class="cth cth-hero">
+  <div class="cth-container">
+
+    <nav class="cth-bc">
+      <a href="/">Accueil</a>
+      <span class="cth-bc-sep">›</span>
+      <span class="cth-bc-current">Contact</span>
+    </nav>
+
+    <div class="cth-center">
+      <div class="cth-label">Nous contacter</div>
+      <h1>Parlons de l'avenir de <span>votre enfant</span></h1>
+      <p class="cth-text">Une question, une demande de visite ou simplement envie d'en savoir plus ? Contactez directement la crèche de votre choix.</p>
+    </div>
+
+    <div class="cth-cards">
+
+      <!-- VILLEMOMBLE -->
+      <div class="cth-card">
+        <div class="cth-card-head">
+          <div class="cth-card-icon cth-ci1">🏠</div>
+          <div>
+            <div class="cth-card-city">Villemomble</div>
+            <div class="cth-card-dept">Seine-Saint-Denis (93)</div>
+            <div class="cth-card-status cth-status-open"><span class="cth-status-dot"></span> Ouvert</div>
+          </div>
+        </div>
+        <div class="cth-card-info">
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">📍</span>
+            <!-- REMPLACE par ta vraie adresse -->
+            <span>12 Rue de la République<br>93250 Villemomble</span>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">📞</span>
+            <a href="tel:+33100000000">01 00 00 00 00</a>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">✉️</span>
+            <a href="mailto:villemomble@lespetitous.fr">villemomble@lespetitous.fr</a>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">🕐</span>
+            <span>Lun – Ven : 7h30 – 19h00</span>
+          </div>
+        </div>
+        <a href="/nos-creches/villemomble/" class="cth-card-btn">Voir cette crèche →</a>
+      </div>
+
+      <!-- JUVISY -->
+      <div class="cth-card">
+        <div class="cth-card-head">
+          <div class="cth-card-icon cth-ci2">🌿</div>
+          <div>
+            <div class="cth-card-city">Juvisy-sur-Orge</div>
+            <div class="cth-card-dept">Essonne (91)</div>
+            <div class="cth-card-status cth-status-soon"><span class="cth-status-dot"></span> Ouverture prochaine</div>
+          </div>
+        </div>
+        <div class="cth-card-info">
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">📍</span>
+            <span>Adresse à confirmer<br>91260 Juvisy-sur-Orge</span>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">📞</span>
+            <a href="tel:+33100000000">01 00 00 00 00</a>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">✉️</span>
+            <a href="mailto:juvisy@lespetitous.fr">juvisy@lespetitous.fr</a>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">🕐</span>
+            <span>Lun – Ven : 7h30 – 19h00</span>
+          </div>
+        </div>
+        <a href="/nos-creches/juvisy-sur-orge/" class="cth-card-btn">Voir cette crèche →</a>
+      </div>
+
+      <!-- KREMLIN-BICÊTRE -->
+      <div class="cth-card">
+        <div class="cth-card-head">
+          <div class="cth-card-icon cth-ci3">🌈</div>
+          <div>
+            <div class="cth-card-city">Kremlin-Bicêtre</div>
+            <div class="cth-card-dept">Val-de-Marne (94)</div>
+            <div class="cth-card-status cth-status-soon"><span class="cth-status-dot"></span> Ouverture prochaine</div>
+          </div>
+        </div>
+        <div class="cth-card-info">
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">📍</span>
+            <span>Adresse à confirmer<br>94270 Le Kremlin-Bicêtre</span>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">📞</span>
+            <a href="tel:+33100000000">01 00 00 00 00</a>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">✉️</span>
+            <a href="mailto:kremlin@lespetitous.fr">kremlin@lespetitous.fr</a>
+          </div>
+          <div class="cth-card-line">
+            <span class="cth-card-line-icon">🕐</span>
+            <span>Lun – Ven : 7h30 – 19h00</span>
+          </div>
+        </div>
+        <a href="/nos-creches/kremlin-bicetre/" class="cth-card-btn">Voir cette crèche →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>

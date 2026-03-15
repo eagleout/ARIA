@@ -1,0 +1,83 @@
+/*
+=====================================================
+  LES PETITOUS — CSS GLOBAL
+  À coller dans : WordPress > Apparence > Personnaliser > CSS additionnel
+  OU dans Elementor > Réglages du site > CSS personnalisé
+=====================================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --lp-orange: #E8813A;
+  --lp-orange-light: #F5A623;
+  --lp-orange-glow: rgba(232, 129, 58, 0.12);
+  --lp-green: #5BBD72;
+  --lp-green-dark: #4AA862;
+  --lp-green-light: #E8F5E9;
+  --lp-cream: #FFF9F3;
+  --lp-cream-deep: #FFF0E0;
+  --lp-sand: #FAF3EB;
+  --lp-text-dark: #2A2A2A;
+  --lp-text-mid: #5A5A6A;
+  --lp-text-light: #8A8A9A;
+  --lp-white: #FFFFFF;
+  --lp-shadow-soft: 0 4px 24px rgba(42, 42, 42, 0.06);
+  --lp-shadow-card: 0 8px 32px rgba(42, 42, 42, 0.08);
+  --lp-shadow-hover: 0 12px 40px rgba(42, 42, 42, 0.12);
+  --lp-radius-sm: 12px;
+  --lp-radius-md: 20px;
+  --lp-radius-lg: 32px;
+  --lp-font-display: 'Nunito', sans-serif;
+  --lp-font-body: 'Quicksand', sans-serif;
+}
+
+/* Reset pour les blocs LP dans Elementor */
+.lp-block * { box-sizing: border-box; margin: 0; padding: 0; }
+.lp-block { font-family: var(--lp-font-body); color: var(--lp-text-dark); line-height: 1.7; font-size: 17px; }
+.lp-block img { max-width: 100%; height: auto; }
+.lp-block a { text-decoration: none; }
+
+/* Container */
+.lp-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Reveal animations */
+.lp-reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.lp-reveal.lp-visible { opacity: 1; transform: translateY(0); }
+.lp-delay-1 { transition-delay: 0.1s; }
+.lp-delay-2 { transition-delay: 0.2s; }
+.lp-delay-3 { transition-delay: 0.3s; }
+.lp-delay-4 { transition-delay: 0.4s; }
+
+/* Keyframes */
+@keyframes lp-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+@keyframes lp-blob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+/* Buttons */
+.lp-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--lp-font-display); font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 16px 36px;
+  transition: all 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-decoration: none !important;
+}
+.lp-btn-primary { background: var(--lp-green); color: white !important; box-shadow: 0 4px 16px rgba(91,189,114,0.3); }
+.lp-btn-primary:hover { background: var(--lp-green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(91,189,114,0.4); }
+.lp-btn-ghost { background: transparent; color: var(--lp-orange) !important; padding: 12px 0; }
+.lp-btn-ghost:hover { gap: 14px; }
+.lp-btn-white { background: white; color: var(--lp-orange) !important; font-weight: 700; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.lp-btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+
+/* Section Labels & Titles */
+.lp-label { font-family: var(--lp-font-display); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--lp-orange); margin-bottom: 12px; }
+.lp-title { font-family: var(--lp-font-display); font-size: clamp(32px,5vw,48px); font-weight: 800; color: var(--lp-text-dark); line-height: 1.2; margin-bottom: 20px; }
+.lp-title span { color: var(--lp-orange); }
+.lp-subtitle { font-size: 18px; color: var(--lp-text-mid); max-width: 600px; line-height: 1.7; }
+.lp-text-center { text-align: center; }
+.lp-mx-auto { margin-left: auto; margin-right: auto; }

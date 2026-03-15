@@ -1,0 +1,97 @@
+<!-- =====================================================
+  BLOC 10 — FOOTER
+  Widget Elementor : HTML
+  
+  NOTE : Si tu utilises le footer builder d'Elementor Pro,
+  tu peux recréer ce footer nativement. Sinon, colle ce
+  bloc dans un widget HTML en bas de page.
+===================================================== -->
+
+<style>
+.lp-footer {
+  background: #2A2A2A;
+  color: rgba(255,255,255,0.7);
+  padding: 64px 0 32px;
+}
+.lp-footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+.lp-footer-brand { font-size: 15px; line-height: 1.8; margin-top: 16px; max-width: 300px; }
+.lp-footer-title {
+  font-family: var(--lp-font-display); font-weight: 700;
+  color: white; font-size: 16px; margin-bottom: 20px;
+}
+.lp-footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; padding: 0; }
+.lp-footer-links a {
+  color: rgba(255,255,255,0.6) !important;
+  text-decoration: none !important; font-size: 15px; transition: color 0.3s;
+}
+.lp-footer-links a:hover { color: var(--lp-orange-light) !important; }
+.lp-footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 28px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 14px;
+}
+.lp-footer-bottom a {
+  color: rgba(255,255,255,0.5) !important;
+  text-decoration: none !important;
+}
+.lp-footer-bottom a:hover { color: white !important; }
+.lp-footer-legal { display: flex; gap: 24px; }
+@media (max-width: 900px) { .lp-footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) {
+  .lp-footer-grid { grid-template-columns: 1fr; }
+  .lp-footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+
+<footer class="lp-block lp-footer">
+  <div class="lp-container">
+    <div class="lp-footer-grid">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 28px;">🦒</span>
+          <!-- REMPLACE le emoji par ton vrai logo : <img src="/wp-content/uploads/logo-petitous-blanc.png" alt="Les Petitous" height="40"> -->
+          <span style="font-family: var(--lp-font-display); font-weight: 800; font-size: 22px; color: white;">Les <span style="color: #F5A623;">Petitous</span></span>
+        </div>
+        <p class="lp-footer-brand">Un réseau de micro-crèches bienveillantes en Île-de-France où chaque enfant grandit à son rythme, entouré de professionnels passionnés.</p>
+      </div>
+      <div>
+        <div class="lp-footer-title">Nos crèches</div>
+        <ul class="lp-footer-links">
+          <li><a href="/nos-creches/villemomble/">Villemomble (93)</a></li>
+          <li><a href="/nos-creches/juvisy-sur-orge/">Juvisy-sur-Orge (91)</a></li>
+          <li><a href="/nos-creches/kremlin-bicetre/">Kremlin-Bicêtre (94)</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="lp-footer-title">Informations</div>
+        <ul class="lp-footer-links">
+          <li><a href="#lp-about">Qui sommes-nous</a></li>
+          <li><a href="#lp-values">Notre pédagogie</a></li>
+          <li><a href="/tarifs-aides-financieres/">Tarifs & Aides</a></li>
+          <li><a href="#lp-faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="lp-footer-title">Contact</div>
+        <ul class="lp-footer-links">
+          <!-- REMPLACE par tes vraies coordonnées -->
+          <li><a href="mailto:contact@lespetitous.fr">contact@lespetitous.fr</a></li>
+          <li><a href="tel:+33100000000">01 00 00 00 00</a></li>
+          <li><a href="https://instagram.com/lespetitous" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://facebook.com/lespetitous" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="lp-footer-bottom">
+      <span>© 2026 Les Petitous — Tous droits réservés</span>
+      <div class="lp-footer-legal">
+        <a href="/mentions-legales/">Mentions légales</a>
+        <a href="/politique-de-confidentialite/">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,145 @@
+<!-- =====================================================
+  PAGE TARIFS & AIDES — BLOC 1 : HERO
+  Widget Elementor : HTML
+  
+  Title SEO : Tarifs micro-crèche et aide CMG | Les Petitous Île-de-France
+  Meta desc : Combien coûte une place en micro-crèche ? Tarifs Les Petitous, aide CMG (jusqu'à 85% pris en charge), crédit d'impôt 50%. Simulez votre reste à charge.
+  URL : /tarifs-aides-financieres/
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+.tah * { box-sizing: border-box; margin: 0; padding: 0; }
+.tah { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; }
+.tah a { text-decoration: none; color: inherit; }
+
+.tah-hero {
+  background: linear-gradient(160deg, #FFF9F3 0%, #FFFFFF 50%, #E8F5E9 100%);
+  padding: 100px 0 80px;
+  position: relative; overflow: hidden;
+}
+.tah-hero::before {
+  content: ''; position: absolute; top: -15%; right: -8%;
+  width: 500px; height: 500px;
+  background: rgba(91,189,114,0.08); border-radius: 50%; filter: blur(80px);
+}
+.tah-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+.tah-bc {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: #8A8A9A; margin-bottom: 32px;
+}
+.tah-bc a { color: #5A5A6A; transition: color 0.3s; }
+.tah-bc a:hover { color: #E8813A; }
+.tah-bc-sep { color: #CACACA; }
+.tah-bc-current { color: #E8813A; font-weight: 600; }
+
+.tah-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+
+.tah-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 16px; }
+.tah-hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(32px, 4.5vw, 50px);
+  font-weight: 800; line-height: 1.15;
+  color: #2A2A2A; margin-bottom: 20px;
+}
+.tah-hero h1 span { color: #E8813A; }
+.tah-text { font-size: 17px; color: #5A5A6A; line-height: 1.8; margin-bottom: 16px; }
+
+/* Key numbers */
+.tah-keynums {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px;
+}
+.tah-keynum {
+  background: white; border-radius: 20px; padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  text-align: center; border: 1px solid rgba(0,0,0,0.03);
+}
+.tah-keynum-val {
+  font-family: 'Nunito', sans-serif; font-size: 36px; font-weight: 800;
+  line-height: 1;
+}
+.tah-keynum-val.orange { color: #E8813A; }
+.tah-keynum-val.green { color: #5BBD72; }
+.tah-keynum-lbl { font-size: 13px; color: #8A8A9A; font-weight: 600; margin-top: 6px; }
+
+/* Info box */
+.tah-info {
+  background: white; border-radius: 24px; padding: 36px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.tah-info-title {
+  font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.tah-info-title span { font-size: 24px; }
+.tah-info-text { font-size: 15px; color: #5A5A6A; line-height: 1.7; margin-bottom: 16px; }
+.tah-info-highlight {
+  background: #E8F5E9; border-radius: 12px; padding: 16px 20px;
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15px; font-weight: 600; color: #2A2A2A;
+}
+.tah-info-highlight-icon { font-size: 24px; }
+.tah-info-highlight strong { color: #5BBD72; }
+
+@media (max-width: 900px) {
+  .tah-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 480px) {
+  .tah-keynums { grid-template-columns: 1fr; }
+}
+</style>
+
+<section class="tah tah-hero">
+  <div class="tah-container">
+
+    <nav class="tah-bc">
+      <a href="/">Accueil</a>
+      <span class="tah-bc-sep">›</span>
+      <span class="tah-bc-current">Tarifs & Aides financières</span>
+    </nav>
+
+    <div class="tah-grid">
+      <div>
+        <div class="tah-label">Tarifs & Aides</div>
+        <h1>Combien coûte une place en <span>micro-crèche ?</span></h1>
+        <p class="tah-text">Nos micro-crèches fonctionnent au tarif PAJE (Prestation d'Accueil du Jeune Enfant). Concrètement, cela signifie que vous avancez les frais de garde et que la CAF vous rembourse une grande partie via le <strong>CMG</strong> (Complément de libre choix du Mode de Garde).</p>
+        <p class="tah-text">En cumulant le CMG et le crédit d'impôt, votre reste à charge réel peut être considérablement réduit.</p>
+
+        <div class="tah-keynums">
+          <div class="tah-keynum">
+            <div class="tah-keynum-val green">85%</div>
+            <div class="tah-keynum-lbl">Pris en charge max par le CMG</div>
+          </div>
+          <div class="tah-keynum">
+            <div class="tah-keynum-val orange">50%</div>
+            <div class="tah-keynum-lbl">Crédit d'impôt sur le reste</div>
+          </div>
+          <div class="tah-keynum">
+            <div class="tah-keynum-val green">712€</div>
+            <div class="tah-keynum-lbl">CMG max / mois (2026)</div>
+          </div>
+          <div class="tah-keynum">
+            <div class="tah-keynum-val orange">10€</div>
+            <div class="tah-keynum-lbl">Tarif horaire max éligible CMG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tah-info">
+        <div class="tah-info-title"><span>💡</span> Comment ça marche concrètement ?</div>
+        <p class="tah-info-text"><strong>1.</strong> Vous payez la facture mensuelle à la micro-crèche</p>
+        <p class="tah-info-text"><strong>2.</strong> La CAF vous verse le CMG chaque mois (jusqu'à 85% de la facture)</p>
+        <p class="tah-info-text"><strong>3.</strong> En fin d'année, vous bénéficiez d'un crédit d'impôt de 50% sur le reste à charge</p>
+        <div class="tah-info-highlight">
+          <div class="tah-info-highlight-icon">✅</div>
+          <div>Résultat : <strong>votre coût réel peut descendre sous 200€/mois</strong> selon vos revenus</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

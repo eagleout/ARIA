@@ -1,0 +1,114 @@
+<!-- =====================================================
+  BLOC 5 — NOS CRÈCHES
+  Widget Elementor : HTML
+  Réglages section Elementor :
+    - Fond : blanc
+    - Padding haut/bas : 100px desktop / 64px mobile
+===================================================== -->
+
+<style>
+.lp-creches { background: var(--lp-white); padding: 100px 0; }
+@media (max-width: 768px) { .lp-creches { padding: 64px 0; } }
+.lp-creches-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+.lp-ccard {
+  background: white; border-radius: 20px; overflow: hidden;
+  box-shadow: var(--lp-shadow-soft);
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  cursor: pointer;
+}
+.lp-ccard:hover { transform: translateY(-6px); box-shadow: var(--lp-shadow-hover); }
+.lp-ccard-img {
+  height: 200px; display: flex; align-items: center; justify-content: center;
+  font-size: 60px; position: relative; overflow: hidden;
+}
+/* 
+  REMPLACE les emojis par tes vraies photos :
+  - Supprime le emoji dans .lp-ccard-img
+  - Ajoute : <img src="/wp-content/uploads/creche-villemomble.jpg" alt="Micro-crèche Les Petitous Villemomble" style="width:100%;height:100%;object-fit:cover;">
+*/
+.lp-ccard-img.lp-bg1 { background: linear-gradient(135deg, #FFF0E0, #FFE0C0); }
+.lp-ccard-img.lp-bg2 { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); }
+.lp-ccard-img.lp-bg3 { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); }
+.lp-ccard-status {
+  position: absolute; top: 16px; right: 16px;
+  padding: 6px 14px; border-radius: 60px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.lp-ccard-status.lp-open { background: var(--lp-green); color: white; }
+.lp-ccard-status.lp-soon { background: var(--lp-orange); color: white; }
+.lp-ccard-body { padding: 28px; }
+.lp-ccard-city { font-family: var(--lp-font-display); font-size: 22px; font-weight: 800; color: var(--lp-text-dark); margin-bottom: 8px; }
+.lp-ccard-addr { font-size: 14px; color: var(--lp-text-light); margin-bottom: 16px; }
+.lp-ccard-meta { display: flex; gap: 20px; margin-bottom: 20px; }
+.lp-ccard-meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--lp-text-mid); font-weight: 600; }
+.lp-ccard-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--lp-orange) !important; font-weight: 700; font-size: 15px;
+  text-decoration: none !important; transition: gap 0.3s;
+}
+.lp-ccard-link:hover { gap: 14px; }
+@media (max-width: 900px) {
+  .lp-creches-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+}
+</style>
+
+<section class="lp-block lp-creches" id="lp-creches">
+  <div class="lp-container">
+    <div class="lp-text-center">
+      <div class="lp-label lp-reveal">Nos établissements</div>
+      <h2 class="lp-title lp-reveal">Trouvez la crèche <span>près de chez vous</span></h2>
+      <p class="lp-subtitle lp-mx-auto lp-reveal">Trois micro-crèches en Île-de-France, chacune offrant un accueil personnalisé et un environnement pensé pour l'éveil des tout-petits.</p>
+    </div>
+    <div class="lp-creches-grid">
+
+      <div class="lp-ccard lp-reveal">
+        <div class="lp-ccard-img lp-bg1">
+          🏠
+          <span class="lp-ccard-status lp-open">Ouvert</span>
+        </div>
+        <div class="lp-ccard-body">
+          <h3 class="lp-ccard-city">Villemomble</h3>
+          <p class="lp-ccard-addr">Seine-Saint-Denis (93)</p>
+          <div class="lp-ccard-meta">
+            <div class="lp-ccard-meta-item"><span>👶</span> 14 places</div>
+            <div class="lp-ccard-meta-item"><span>🕐</span> 7h30 – 19h</div>
+          </div>
+          <a href="/nos-creches/villemomble/" class="lp-ccard-link">Découvrir cette crèche →</a>
+        </div>
+      </div>
+
+      <div class="lp-ccard lp-reveal lp-delay-1">
+        <div class="lp-ccard-img lp-bg2">
+          🌿
+          <span class="lp-ccard-status lp-soon">Ouverture prochaine</span>
+        </div>
+        <div class="lp-ccard-body">
+          <h3 class="lp-ccard-city">Juvisy-sur-Orge</h3>
+          <p class="lp-ccard-addr">Essonne (91)</p>
+          <div class="lp-ccard-meta">
+            <div class="lp-ccard-meta-item"><span>👶</span> 14 places</div>
+            <div class="lp-ccard-meta-item"><span>🕐</span> 7h30 – 19h</div>
+          </div>
+          <a href="/nos-creches/juvisy-sur-orge/" class="lp-ccard-link">Pré-inscription ouverte →</a>
+        </div>
+      </div>
+
+      <div class="lp-ccard lp-reveal lp-delay-2">
+        <div class="lp-ccard-img lp-bg3">
+          🌈
+          <span class="lp-ccard-status lp-soon">Ouverture prochaine</span>
+        </div>
+        <div class="lp-ccard-body">
+          <h3 class="lp-ccard-city">Kremlin-Bicêtre</h3>
+          <p class="lp-ccard-addr">Val-de-Marne (94)</p>
+          <div class="lp-ccard-meta">
+            <div class="lp-ccard-meta-item"><span>👶</span> 14 places</div>
+            <div class="lp-ccard-meta-item"><span>🕐</span> 7h30 – 19h</div>
+          </div>
+          <a href="/nos-creches/kremlin-bicetre/" class="lp-ccard-link">Pré-inscription ouverte →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

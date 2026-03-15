@@ -1,0 +1,223 @@
+<!-- =====================================================
+  PAGE NOS CRÈCHES — BLOC 2 : FICHES ÉTABLISSEMENTS
+  Widget Elementor : HTML
+  
+  3 grandes fiches détaillées, une par crèche.
+  Chaque fiche = mini-page avec photo, infos, CTA
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+.ncc * { box-sizing: border-box; margin: 0; padding: 0; }
+.ncc { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 80px 0; }
+.ncc a { text-decoration: none; }
+@media (max-width: 768px) { .ncc { padding: 48px 0; } }
+.ncc-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Establishment cards */
+.ncc-cards { display: flex; flex-direction: column; gap: 48px; }
+
+.ncc-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: #FAFAF8;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.ncc-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); transform: translateY(-4px); }
+.ncc-card:nth-child(even) { direction: rtl; }
+.ncc-card:nth-child(even) > * { direction: ltr; }
+
+/* Image side */
+.ncc-card-img {
+  min-height: 400px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 80px; position: relative; overflow: hidden;
+}
+.ncc-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.ncc-bg1 { background: linear-gradient(135deg, #FFF0E0 0%, #FFE0C0 100%); }
+.ncc-bg2 { background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); }
+.ncc-bg3 { background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); }
+
+.ncc-card-img-placeholder {
+  text-align: center; color: #CACACA;
+}
+.ncc-card-img-placeholder span { display: block; font-size: 64px; margin-bottom: 8px; }
+.ncc-card-img-placeholder p { font-size: 14px; font-weight: 600; }
+
+/* Status badge on image */
+.ncc-status {
+  position: absolute; top: 20px; left: 20px;
+  padding: 8px 18px; border-radius: 60px;
+  font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; z-index: 2;
+}
+.ncc-open { background: #5BBD72; color: white; }
+.ncc-soon { background: #E8813A; color: white; }
+
+/* Content side */
+.ncc-card-content { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+
+.ncc-card-dept {
+  font-size: 13px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: #E8813A; margin-bottom: 8px;
+}
+.ncc-card-city {
+  font-family: 'Nunito', sans-serif; font-size: 32px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 12px; line-height: 1.2;
+}
+.ncc-card-address {
+  font-size: 15px; color: #8A8A9A; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 8px;
+}
+.ncc-card-desc {
+  font-size: 16px; color: #5A5A6A; line-height: 1.8; margin-bottom: 24px;
+}
+
+/* Info pills */
+.ncc-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.ncc-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: white; padding: 8px 16px; border-radius: 60px;
+  font-size: 13px; font-weight: 600; color: #2A2A2A;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.ncc-pill-icon { font-size: 16px; }
+
+/* Google rating inline */
+.ncc-rating {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 28px;
+}
+.ncc-rating-stars { color: #F5A623; font-size: 16px; letter-spacing: 1px; }
+.ncc-rating-score { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px; color: #2A2A2A; }
+.ncc-rating-count { font-size: 13px; color: #8A8A9A; }
+
+/* Buttons */
+.ncc-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.ncc-btn-green {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 14px 28px;
+  background: #5BBD72; color: white;
+  box-shadow: 0 4px 16px rgba(91,189,114,0.3);
+  transition: all 0.35s ease;
+}
+.ncc-btn-green:hover { background: #4AA862; transform: translateY(-2px); }
+.ncc-btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 15px;
+  border: 2px solid #E8813A; cursor: pointer; border-radius: 60px; padding: 12px 26px;
+  background: transparent; color: #E8813A;
+  transition: all 0.35s ease;
+}
+.ncc-btn-outline:hover { background: #E8813A; color: white; transform: translateY(-2px); }
+
+@media (max-width: 900px) {
+  .ncc-card { grid-template-columns: 1fr; }
+  .ncc-card:nth-child(even) { direction: ltr; }
+  .ncc-card-img { min-height: 250px; }
+  .ncc-card-content { padding: 32px 24px; }
+}
+</style>
+
+<section class="ncc">
+  <div class="ncc-container">
+    <div class="ncc-cards">
+
+      <!-- ==================== VILLEMOMBLE ==================== -->
+      <div class="ncc-card">
+        <div class="ncc-card-img ncc-bg1">
+          <span class="ncc-status ncc-open">Ouvert</span>
+          <!-- REMPLACE par ta vraie photo :
+          <img src="/wp-content/uploads/creche-villemomble.jpg" alt="Micro-crèche Les Petitous Villemomble">
+          -->
+          <div class="ncc-card-img-placeholder"><span>🏠</span><p>Photo crèche</p></div>
+        </div>
+        <div class="ncc-card-content">
+          <div class="ncc-card-dept">Seine-Saint-Denis · 93</div>
+          <h2 class="ncc-card-city">Villemomble</h2>
+          <div class="ncc-card-address">📍 12 Rue de la République, 93250 Villemomble</div>
+          <p class="ncc-card-desc">Notre première micro-crèche, située au cœur de Villemomble. Un espace de 150 m² avec jardin, pensé pour offrir aux tout-petits un environnement chaleureux et stimulant pour leur éveil.</p>
+          <div class="ncc-pills">
+            <div class="ncc-pill"><span class="ncc-pill-icon">👶</span> 14 places</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🕐</span> 7h30 – 19h</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🌿</span> Jardin</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🍽️</span> Repas maison</div>
+          </div>
+          <div class="ncc-rating">
+            <div class="ncc-rating-stars">★★★★★</div>
+            <div class="ncc-rating-score">4.9</div>
+            <div class="ncc-rating-count">(24 avis)</div>
+          </div>
+          <div class="ncc-buttons">
+            <a href="/nos-creches/villemomble/" class="ncc-btn-green">Découvrir cette crèche →</a>
+            <a href="/pre-inscription/" class="ncc-btn-outline">Pré-inscrire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== JUVISY-SUR-ORGE ==================== -->
+      <div class="ncc-card">
+        <div class="ncc-card-img ncc-bg2">
+          <span class="ncc-status ncc-soon">Ouverture prochaine</span>
+          <!-- REMPLACE par ta vraie photo :
+          <img src="/wp-content/uploads/creche-juvisy.jpg" alt="Micro-crèche Les Petitous Juvisy-sur-Orge">
+          -->
+          <div class="ncc-card-img-placeholder"><span>🌿</span><p>Photo crèche</p></div>
+        </div>
+        <div class="ncc-card-content">
+          <div class="ncc-card-dept">Essonne · 91</div>
+          <h2 class="ncc-card-city">Juvisy-sur-Orge</h2>
+          <!-- REMPLACE par la vraie adresse -->
+          <div class="ncc-card-address">📍 Adresse à confirmer, 91260 Juvisy-sur-Orge</div>
+          <p class="ncc-card-desc">Notre deuxième micro-crèche ouvrira prochainement à Juvisy-sur-Orge. Un nouvel espace conçu dans le même esprit de bienveillance, au plus près des familles de l'Essonne. Les pré-inscriptions sont d'ores et déjà ouvertes.</p>
+          <div class="ncc-pills">
+            <div class="ncc-pill"><span class="ncc-pill-icon">👶</span> 14 places</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🕐</span> 7h30 – 19h</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🚇</span> Proche RER</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🍽️</span> Repas maison</div>
+          </div>
+          <div class="ncc-buttons">
+            <a href="/nos-creches/juvisy-sur-orge/" class="ncc-btn-green">En savoir plus →</a>
+            <a href="/pre-inscription/" class="ncc-btn-outline">Pré-inscrire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== KREMLIN-BICÊTRE ==================== -->
+      <div class="ncc-card">
+        <div class="ncc-card-img ncc-bg3">
+          <span class="ncc-status ncc-soon">Ouverture prochaine</span>
+          <!-- REMPLACE par ta vraie photo :
+          <img src="/wp-content/uploads/creche-kremlin.jpg" alt="Micro-crèche Les Petitous Kremlin-Bicêtre">
+          -->
+          <div class="ncc-card-img-placeholder"><span>🌈</span><p>Photo crèche</p></div>
+        </div>
+        <div class="ncc-card-content">
+          <div class="ncc-card-dept">Val-de-Marne · 94</div>
+          <h2 class="ncc-card-city">Kremlin-Bicêtre</h2>
+          <!-- REMPLACE par la vraie adresse -->
+          <div class="ncc-card-address">📍 Adresse à confirmer, 94270 Le Kremlin-Bicêtre</div>
+          <p class="ncc-card-desc">Notre troisième micro-crèche est en préparation au Kremlin-Bicêtre, aux portes de Paris. Un espace moderne et lumineux pour accueillir les familles du Val-de-Marne dans les meilleures conditions.</p>
+          <div class="ncc-pills">
+            <div class="ncc-pill"><span class="ncc-pill-icon">👶</span> 14 places</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🕐</span> 7h30 – 19h</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🚇</span> Métro ligne 7</div>
+            <div class="ncc-pill"><span class="ncc-pill-icon">🍽️</span> Repas maison</div>
+          </div>
+          <div class="ncc-buttons">
+            <a href="/nos-creches/kremlin-bicetre/" class="ncc-btn-green">En savoir plus →</a>
+            <a href="/pre-inscription/" class="ncc-btn-outline">Pré-inscrire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

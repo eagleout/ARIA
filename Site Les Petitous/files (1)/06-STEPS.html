@@ -1,0 +1,78 @@
+<!-- =====================================================
+  BLOC 6 — 3 ÉTAPES (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.lps * { box-sizing: border-box; margin: 0; padding: 0; }
+.lps { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: linear-gradient(160deg, #FFF9F3 0%, #FFFFFF 100%); padding: 100px 0; }
+.lps a { text-decoration: none; }
+@media (max-width: 768px) { .lps { padding: 64px 0; } }
+.lps-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.lps-center { text-align: center; }
+.lps-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.lps-title { font-family: 'Nunito', sans-serif; font-size: clamp(32px,5vw,48px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 20px; }
+.lps-title span { color: #E8813A; }
+.lps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; position: relative; }
+.lps-grid::before {
+  content: ''; position: absolute; top: 44px; left: 16%; right: 16%;
+  height: 2px; background: linear-gradient(90deg, #E8813A, #5BBD72); opacity: 0.2;
+}
+.lps-card { text-align: center; position: relative; z-index: 2; }
+.lps-num {
+  width: 88px; height: 88px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  font-family: 'Nunito', sans-serif; font-size: 32px; font-weight: 800;
+  background: white; box-shadow: 0 8px 32px rgba(42,42,42,0.08);
+}
+.lps-card:nth-child(1) .lps-num { color: #E8813A; border: 3px solid #FFF0E0; }
+.lps-card:nth-child(2) .lps-num { color: #5BBD72; border: 3px solid #E8F5E9; }
+.lps-card:nth-child(3) .lps-num { color: #E8813A; border: 3px solid #FFF0E0; }
+.lps-card h3 { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800; color: #2A2A2A; margin-bottom: 10px; }
+.lps-card p { font-size: 15px; color: #5A5A6A; max-width: 280px; margin: 0 auto; line-height: 1.7; }
+.lps-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 16px 36px;
+  background: #5BBD72; color: white;
+  box-shadow: 0 4px 16px rgba(91,189,114,0.3);
+  transition: all 0.35s ease; text-decoration: none; margin-top: 48px;
+}
+.lps-btn:hover { background: #4AA862; transform: translateY(-2px); }
+@media (max-width: 768px) {
+  .lps-grid { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .lps-grid::before { display: none; }
+}
+</style>
+
+<section class="lps">
+  <div class="lps-container">
+    <div class="lps-center">
+      <div class="lps-label">Comment ça marche</div>
+      <h2 class="lps-title">Inscrire votre enfant en <span>3 étapes</span></h2>
+    </div>
+    <div class="lps-grid">
+      <div class="lps-card">
+        <div class="lps-num">1</div>
+        <h3>Pré-inscription en ligne</h3>
+        <p>Remplissez le formulaire en 2 minutes. Gratuit et sans engagement.</p>
+      </div>
+      <div class="lps-card">
+        <div class="lps-num">2</div>
+        <h3>Échange personnalisé</h3>
+        <p>Notre équipe vous rappelle pour faire connaissance et répondre à vos questions.</p>
+      </div>
+      <div class="lps-card">
+        <div class="lps-num">3</div>
+        <h3>Visite & Finalisation</h3>
+        <p>Découvrez la crèche, rencontrez l'équipe et finalisez l'inscription de votre enfant.</p>
+      </div>
+    </div>
+    <div class="lps-center">
+      <a href="/pre-inscription/" class="lps-btn">Commencer la pré-inscription</a>
+    </div>
+  </div>
+</section>

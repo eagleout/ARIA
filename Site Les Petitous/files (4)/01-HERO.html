@@ -1,0 +1,134 @@
+<!-- =====================================================
+  PAGE PÉDAGOGIE — BLOC 1 : HERO
+  Widget Elementor : HTML
+  
+  Title SEO : Notre approche pédagogique | Micro-crèche Les Petitous
+  Meta desc : Découvrez la pédagogie des crèches Les Petitous : éveil sensoriel, activités Montessori, accompagnement personnalisé. Un environnement pensé pour chaque enfant.
+  URL : /notre-pedagogie/
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+.pdh * { box-sizing: border-box; margin: 0; padding: 0; }
+.pdh { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; }
+.pdh a { text-decoration: none; }
+
+.pdh-hero {
+  background: linear-gradient(160deg, #FFF9F3 0%, #FFFFFF 50%, #E8F5E9 100%);
+  padding: 100px 0 80px;
+  position: relative; overflow: hidden;
+}
+.pdh-hero::before {
+  content: ''; position: absolute; top: -15%; left: -8%;
+  width: 500px; height: 500px;
+  background: rgba(91,189,114,0.08); border-radius: 50%; filter: blur(80px);
+}
+.pdh-hero::after {
+  content: ''; position: absolute; bottom: -10%; right: -5%;
+  width: 400px; height: 400px;
+  background: rgba(232,129,58,0.08); border-radius: 50%; filter: blur(60px);
+}
+.pdh-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+
+.pdh-bc {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: #8A8A9A; margin-bottom: 32px;
+}
+.pdh-bc a { color: #5A5A6A; transition: color 0.3s; }
+.pdh-bc a:hover { color: #E8813A; }
+.pdh-bc-sep { color: #CACACA; }
+.pdh-bc-current { color: #E8813A; font-weight: 600; }
+
+.pdh-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 70px; align-items: center;
+}
+.pdh-label {
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 16px;
+}
+.pdh-hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 800; line-height: 1.15;
+  color: #2A2A2A; margin-bottom: 20px;
+}
+.pdh-hero h1 span { color: #E8813A; }
+.pdh-text {
+  font-size: 17px; color: #5A5A6A; line-height: 1.8; margin-bottom: 20px;
+}
+.pdh-quote {
+  background: white; border-left: 4px solid #E8813A;
+  padding: 20px 24px; border-radius: 0 16px 16px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-top: 28px;
+}
+.pdh-quote p {
+  font-size: 16px; color: #5A5A6A; font-style: italic; line-height: 1.7; margin-bottom: 8px;
+}
+.pdh-quote-author { font-size: 13px; color: #E8813A; font-weight: 700; }
+
+/* Visual side */
+.pdh-visual { position: relative; }
+.pdh-img-main {
+  width: 100%; aspect-ratio: 4/3; border-radius: 28px;
+  background: linear-gradient(135deg, #FFF0E0, #E8F5E9);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 100px; overflow: hidden;
+}
+.pdh-img-main img { width: 100%; height: 100%; object-fit: cover; }
+.pdh-float-badge {
+  position: absolute; bottom: -16px; left: -16px;
+  background: #5BBD72; color: white;
+  padding: 16px 24px; border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(91,189,114,0.3);
+  display: flex; align-items: center; gap: 12px;
+}
+.pdh-float-badge-icon { font-size: 28px; }
+.pdh-float-badge-text { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 14px; line-height: 1.3; }
+
+@media (max-width: 900px) {
+  .pdh-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pdh-visual { order: -1; }
+}
+</style>
+
+<section class="pdh pdh-hero">
+  <div class="pdh-container">
+
+    <nav class="pdh-bc">
+      <a href="/">Accueil</a>
+      <span class="pdh-bc-sep">›</span>
+      <span class="pdh-bc-current">Notre pédagogie</span>
+    </nav>
+
+    <div class="pdh-grid">
+      <div>
+        <div class="pdh-label">Notre philosophie</div>
+        <h1>Une pédagogie centrée sur <span>l'enfant</span></h1>
+        <p class="pdh-text">Chez Les Petitous, nous croyons que chaque enfant est unique et possède un potentiel immense. Notre approche pédagogique s'inspire des grands courants de l'éducation bienveillante pour offrir à votre enfant un cadre d'épanouissement optimal.</p>
+        <p class="pdh-text">Nous plaçons l'enfant au centre de chaque décision : son rythme, ses besoins, sa curiosité naturelle guident nos pratiques au quotidien.</p>
+
+        <div class="pdh-quote">
+          <p>« L'enfant n'est pas un vase que l'on remplit, mais une source que l'on laisse jaillir. »</p>
+          <div class="pdh-quote-author">— Maria Montessori</div>
+        </div>
+      </div>
+
+      <div class="pdh-visual">
+        <div class="pdh-img-main">
+          <!-- REMPLACE par ta vraie photo :
+          <img src="/wp-content/uploads/pedagogie-hero.jpg" alt="Enfant en activité d'éveil à la crèche Les Petitous">
+          -->
+          🧒
+        </div>
+        <div class="pdh-float-badge">
+          <div class="pdh-float-badge-icon">🌱</div>
+          <div class="pdh-float-badge-text">Apprendre<br>en s'amusant</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

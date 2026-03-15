@@ -1,0 +1,63 @@
+<!-- =====================================================
+  PAGE PÉDAGOGIE — BLOC 6 : CTA FINAL
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.pdc * { box-sizing: border-box; margin: 0; padding: 0; }
+.pdc { font-family: 'Quicksand', sans-serif; }
+.pdc a { text-decoration: none; }
+.pdc-section {
+  background: linear-gradient(135deg, #E8813A 0%, #F5A623 100%);
+  padding: 100px 0; position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .pdc-section { padding: 64px 0; } }
+.pdc-section::before {
+  content: ''; position: absolute; top: -40%; right: -15%;
+  width: 500px; height: 500px;
+  background: rgba(255,255,255,0.08); border-radius: 50%;
+}
+.pdc-container { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+.pdc-inner { text-align: center; }
+.pdc-inner h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(26px, 4vw, 40px); font-weight: 800;
+  color: white; margin-bottom: 16px; line-height: 1.2;
+}
+.pdc-inner p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.7; }
+.pdc-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.pdc-btn-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 18px 36px;
+  background: white; color: #E8813A;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+}
+.pdc-btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+.pdc-btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px;
+  border: 2px solid rgba(255,255,255,0.4); cursor: pointer; border-radius: 60px; padding: 16px 34px;
+  background: transparent; color: white;
+  transition: all 0.35s ease;
+}
+.pdc-btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: white; }
+</style>
+
+<section class="pdc">
+  <div class="pdc-section">
+    <div class="pdc-container">
+      <div class="pdc-inner">
+        <h2>Envie de voir notre pédagogie en action ? 🦒</h2>
+        <p>Venez visiter l'une de nos crèches et rencontrer notre équipe. Nous vous montrerons comment votre enfant s'épanouit au quotidien.</p>
+        <div class="pdc-buttons">
+          <a href="/pre-inscription/" class="pdc-btn-white">Réserver une visite</a>
+          <a href="/nos-creches/" class="pdc-btn-ghost">Voir nos crèches</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

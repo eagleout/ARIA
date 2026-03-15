@@ -1,0 +1,171 @@
+<!-- =====================================================
+  PAGE ÉTABLISSEMENT — BLOC 7 : FORMULAIRE + SCHEMA SEO
+  Widget Elementor : HTML
+  
+  NOTE : Le formulaire ici est un CTA qui renvoie vers ta 
+  page /pre-inscription/ ou tu peux remplacer par ton 
+  shortcode WPForms / Gravity Forms directement.
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.epf * { box-sizing: border-box; margin: 0; padding: 0; }
+.epf { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; }
+.epf a { text-decoration: none; }
+
+.epf-section {
+  background: linear-gradient(135deg, #E8813A 0%, #F5A623 100%);
+  padding: 100px 0; position: relative; overflow: hidden;
+}
+@media (max-width: 768px) { .epf-section { padding: 64px 0; } }
+.epf-section::before {
+  content: ''; position: absolute; top: -40%; right: -15%;
+  width: 500px; height: 500px;
+  background: rgba(255,255,255,0.08); border-radius: 50%;
+}
+.epf-section::after {
+  content: ''; position: absolute; bottom: -25%; left: -8%;
+  width: 350px; height: 350px;
+  background: rgba(255,255,255,0.05); border-radius: 50%;
+}
+
+.epf-container { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+.epf-inner { text-align: center; }
+
+.epf-inner h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(28px, 4vw, 42px); font-weight: 800;
+  color: white; margin-bottom: 16px; line-height: 1.2;
+}
+.epf-inner p {
+  font-size: 18px; color: rgba(255,255,255,0.85);
+  margin-bottom: 12px; line-height: 1.7;
+}
+
+/* Checklist */
+.epf-checks {
+  display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+  margin: 28px 0 36px;
+}
+.epf-check {
+  display: flex; align-items: center; gap: 8px;
+  color: white; font-size: 15px; font-weight: 600;
+}
+.epf-check-icon {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+}
+
+.epf-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 18px;
+  border: none; cursor: pointer; border-radius: 60px; padding: 20px 44px;
+  background: white; color: #E8813A;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+}
+.epf-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+
+.epf-note {
+  margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.6);
+}
+
+/* 
+  ALTERNATIVE : Si tu veux intégrer ton formulaire WPForms directement,
+  remplace tout le contenu de .epf-inner par :
+  
+  <h2 style="color:white; font-family:'Nunito',sans-serif; font-weight:800; font-size:36px; margin-bottom:24px;">
+    Pré-inscrire mon enfant à Villemomble
+  </h2>
+  <div style="background:white; border-radius:24px; padding:40px; max-width:600px; margin:0 auto; box-shadow:0 12px 40px rgba(0,0,0,0.15);">
+    [wpforms id="XXX"]
+  </div>
+  
+  Remplace XXX par l'ID de ton formulaire WPForms.
+*/
+</style>
+
+<section class="epf" id="ep-form">
+  <div class="epf-section">
+    <div class="epf-container">
+      <div class="epf-inner">
+        <h2>Pré-inscrire mon enfant à Villemomble 🦒</h2>
+        <p>Remplissez le formulaire et notre équipe vous recontacte sous 48h pour organiser une visite de la crèche.</p>
+
+        <div class="epf-checks">
+          <div class="epf-check"><div class="epf-check-icon">✓</div> Gratuit</div>
+          <div class="epf-check"><div class="epf-check-icon">✓</div> Sans engagement</div>
+          <div class="epf-check"><div class="epf-check-icon">✓</div> Réponse sous 48h</div>
+        </div>
+
+        <a href="/pre-inscription/" class="epf-btn">Remplir le formulaire →</a>
+        <!-- OU remplace le lien par ton shortcode WPForms :
+        [wpforms id="XXX"] 
+        -->
+
+        <p class="epf-note">Vos données sont protégées et ne seront jamais partagées avec des tiers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+  SCHEMA SEO — LocalBusiness + ChildCare
+  
+  COMMENT L'AJOUTER :
+  Option 1 : Colle ce script dans le même widget HTML
+  Option 2 : Utilise Rank Math > Schema > Ajouter un schema personnalisé
+  
+  PERSONNALISER : Remplace TOUTES les valeurs entre crochets [...]
+===================================================== -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "Micro-crèche Les Petitous Villemomble",
+  "description": "Micro-crèche accueillant 14 enfants de 10 semaines à 3 ans dans un environnement bienveillant à Villemomble (93).",
+  "url": "https://lespetitous.fr/nos-creches/villemomble/",
+  "telephone": "+33100000000",
+  "email": "villemomble@lespetitous.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12 Rue de la République",
+    "addressLocality": "Villemomble",
+    "postalCode": "93250",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8831,
+    "longitude": 2.5142
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "07:30",
+    "closes": "19:00"
+  },
+  "priceRange": "€€",
+  "image": "https://lespetitous.fr/wp-content/uploads/creche-villemomble.jpg",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "reviewCount": "24"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Les Petitous",
+    "url": "https://lespetitous.fr"
+  },
+  "sameAs": [
+    "https://www.facebook.com/lespetitous",
+    "https://www.instagram.com/lespetitous"
+  ]
+}
+</script>

@@ -1,0 +1,79 @@
+<!-- =====================================================
+  PAGE ÉTABLISSEMENT — BLOC 2 : INFOS PRATIQUES
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+.epi * { box-sizing: border-box; margin: 0; padding: 0; }
+.epi { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FFFFFF; padding: 80px 0; }
+@media (max-width: 768px) { .epi { padding: 48px 0; } }
+.epi-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.epi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.epi-card {
+  background: #FAFAF8; border-radius: 20px; padding: 32px 24px;
+  text-align: center; border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+.epi-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(42,42,42,0.08); }
+.epi-card-icon {
+  width: 64px; height: 64px; border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; margin: 0 auto 16px;
+}
+.epi-card-icon-orange { background: #FFF0E0; }
+.epi-card-icon-green { background: #E8F5E9; }
+.epi-card-icon-blue { background: #E3F2FD; }
+.epi-card-icon-purple { background: #F3E8FF; }
+.epi-card h3 {
+  font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 8px;
+}
+.epi-card-value {
+  font-family: 'Nunito', sans-serif; font-size: 24px; font-weight: 800;
+  color: #E8813A; margin-bottom: 4px;
+}
+.epi-card p { font-size: 14px; color: #5A5A6A; line-height: 1.5; }
+
+@media (max-width: 900px) { .epi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .epi-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="epi">
+  <div class="epi-container">
+    <div class="epi-grid">
+
+      <div class="epi-card">
+        <div class="epi-card-icon epi-card-icon-orange">🕐</div>
+        <h3>Horaires</h3>
+        <div class="epi-card-value">7h30 – 19h</div>
+        <p>Du lundi au vendredi<br>Fermé week-ends et jours fériés</p>
+      </div>
+
+      <div class="epi-card">
+        <div class="epi-card-icon epi-card-icon-green">👶</div>
+        <h3>Capacité</h3>
+        <div class="epi-card-value">14 places</div>
+        <p>Enfants de 10 semaines<br>à 3 ans (entrée maternelle)</p>
+      </div>
+
+      <div class="epi-card">
+        <div class="epi-card-icon epi-card-icon-blue">🏠</div>
+        <h3>Locaux</h3>
+        <!-- REMPLACE par tes vraies données -->
+        <div class="epi-card-value">150 m²</div>
+        <p>Espace de vie, salle de sieste,<br>coin repas, espace extérieur</p>
+      </div>
+
+      <div class="epi-card">
+        <div class="epi-card-icon epi-card-icon-purple">🎓</div>
+        <h3>Équipe</h3>
+        <!-- REMPLACE par ton vrai effectif -->
+        <div class="epi-card-value">5 pros</div>
+        <p>Éducatrices de jeunes enfants,<br>auxiliaires de puériculture</p>
+      </div>
+
+    </div>
+  </div>
+</section>

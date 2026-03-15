@@ -1,0 +1,67 @@
+<!-- =====================================================
+  BLOC 4 — NOS VALEURS (VERSION AUTONOME)
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.lpv * { box-sizing: border-box; margin: 0; padding: 0; }
+.lpv { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; position: relative; overflow: hidden; }
+@media (max-width: 768px) { .lpv { padding: 64px 0; } }
+.lpv::before {
+  content: ''; position: absolute; top: -100px; right: -100px;
+  width: 300px; height: 300px; background: rgba(232,129,58,0.12);
+  border-radius: 50%; filter: blur(80px);
+}
+.lpv-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+.lpv-center { text-align: center; }
+.lpv-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.lpv-title { font-family: 'Nunito', sans-serif; font-size: clamp(32px,5vw,48px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 20px; }
+.lpv-title span { color: #E8813A; }
+.lpv-subtitle { font-size: 18px; color: #5A5A6A; max-width: 600px; line-height: 1.7; margin: 0 auto; }
+.lpv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+.lpv-card {
+  background: white; border-radius: 20px; padding: 40px 32px;
+  text-align: center; box-shadow: 0 4px 24px rgba(42,42,42,0.06);
+  transition: all 0.4s ease; position: relative; overflow: hidden;
+}
+.lpv-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, #E8813A, #F5A623);
+  transform: scaleX(0); transition: transform 0.4s;
+}
+.lpv-card:hover::before { transform: scaleX(1); }
+.lpv-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(42,42,42,0.12); }
+.lpv-emoji { font-size: 48px; margin-bottom: 20px; display: block; }
+.lpv-card h3 { font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 800; color: #2A2A2A; margin-bottom: 12px; }
+.lpv-card p { font-size: 15px; color: #5A5A6A; line-height: 1.7; }
+@media (max-width: 768px) { .lpv-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; } }
+</style>
+
+<section class="lpv" id="lp-values">
+  <div class="lpv-container">
+    <div class="lpv-center">
+      <div class="lpv-label">Notre pédagogie</div>
+      <h2 class="lpv-title">Pourquoi les parents nous font <span>confiance</span></h2>
+      <p class="lpv-subtitle">Chaque crèche Les Petitous offre un cadre bienveillant où votre enfant développe son plein potentiel.</p>
+    </div>
+    <div class="lpv-grid">
+      <div class="lpv-card">
+        <span class="lpv-emoji">🤗</span>
+        <h3>Bienveillance</h3>
+        <p>Chaque enfant est accueilli avec douceur et attention. Nos équipes respectent le rythme de chacun pour favoriser son bien-être et son développement harmonieux.</p>
+      </div>
+      <div class="lpv-card">
+        <span class="lpv-emoji">🎨</span>
+        <h3>Éveil & Créativité</h3>
+        <p>Des activités sensorielles, artistiques et motrices adaptées à chaque âge. Jeux, découvertes et expériences pour stimuler la curiosité et l'autonomie.</p>
+      </div>
+      <div class="lpv-card">
+        <span class="lpv-emoji">🤝</span>
+        <h3>Confiance & Transparence</h3>
+        <p>Une relation de confiance avec les familles grâce à une communication quotidienne. Les parents sont informés et impliqués à chaque étape.</p>
+      </div>
+    </div>
+  </div>
+</section>

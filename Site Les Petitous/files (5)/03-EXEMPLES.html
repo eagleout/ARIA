@@ -1,0 +1,183 @@
+<!-- =====================================================
+  PAGE TARIFS & AIDES — BLOC 3 : EXEMPLE CONCRET + CRÉDIT D'IMPÔT
+  Widget Elementor : HTML
+===================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+.tae * { box-sizing: border-box; margin: 0; padding: 0; }
+.tae { font-family: 'Quicksand', sans-serif; color: #2A2A2A; line-height: 1.7; font-size: 17px; background: #FAF3EB; padding: 100px 0; }
+@media (max-width: 768px) { .tae { padding: 64px 0; } }
+.tae-container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.tae-center { text-align: center; margin-bottom: 56px; }
+.tae-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8813A; margin-bottom: 12px; }
+.tae-title { font-family: 'Nunito', sans-serif; font-size: clamp(28px,4vw,40px); font-weight: 800; color: #2A2A2A; line-height: 1.2; margin-bottom: 12px; }
+.tae-title span { color: #E8813A; }
+.tae-subtitle { font-size: 17px; color: #5A5A6A; max-width: 600px; margin: 0 auto; }
+
+.tae-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+/* Example card */
+.tae-example {
+  background: white; border-radius: 24px; padding: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.tae-example-head {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+  padding-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.tae-example-icon {
+  width: 52px; height: 52px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+}
+.tae-ei1 { background: #FFF0E0; }
+.tae-ei2 { background: #E8F5E9; }
+.tae-example-head-text h3 { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 800; color: #2A2A2A; }
+.tae-example-head-text p { font-size: 13px; color: #8A8A9A; }
+
+.tae-line {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(0,0,0,0.06);
+}
+.tae-line:last-of-type { border-bottom: none; }
+.tae-line-label { font-size: 15px; color: #5A5A6A; }
+.tae-line-value { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 16px; }
+.tae-line-value.red { color: #E8813A; }
+.tae-line-value.green { color: #5BBD72; }
+
+.tae-total {
+  margin-top: 20px; padding: 20px;
+  border-radius: 16px; text-align: center;
+}
+.tae-total-green { background: #E8F5E9; }
+.tae-total-label { font-size: 14px; color: #5A5A6A; margin-bottom: 4px; }
+.tae-total-value {
+  font-family: 'Nunito', sans-serif; font-size: 36px; font-weight: 800;
+  color: #5BBD72;
+}
+.tae-total-sub { font-size: 13px; color: #8A8A9A; margin-top: 4px; }
+
+/* Credit d'impot card */
+.tae-credit {
+  background: white; border-radius: 24px; padding: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.tae-credit h3 {
+  font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 800;
+  color: #2A2A2A; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.tae-credit-text { font-size: 15px; color: #5A5A6A; line-height: 1.8; margin-bottom: 20px; }
+
+.tae-credit-steps { display: flex; flex-direction: column; gap: 16px; }
+.tae-credit-step {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: #FAFAF8; border-radius: 14px; padding: 16px 20px;
+}
+.tae-credit-step-num {
+  width: 32px; height: 32px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 800;
+  color: white; flex-shrink: 0;
+}
+.tae-csn-orange { background: #E8813A; }
+.tae-csn-green { background: #5BBD72; }
+.tae-csn-blue { background: #4A90D9; }
+.tae-credit-step-text { font-size: 14px; color: #5A5A6A; line-height: 1.6; }
+.tae-credit-step-text strong { color: #2A2A2A; }
+
+.tae-credit-highlight {
+  margin-top: 24px; padding: 20px;
+  background: linear-gradient(135deg, #FFF0E0, #FFF9F3);
+  border-radius: 16px; text-align: center;
+  border: 2px solid rgba(232,129,58,0.15);
+}
+.tae-credit-highlight p {
+  font-size: 15px; color: #5A5A6A;
+}
+.tae-credit-highlight strong {
+  font-family: 'Nunito', sans-serif; font-size: 24px; font-weight: 800;
+  color: #E8813A; display: block; margin-top: 4px;
+}
+
+@media (max-width: 900px) { .tae-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="tae">
+  <div class="tae-container">
+    <div class="tae-center">
+      <div class="tae-label">Exemples concrets</div>
+      <h2 class="tae-title">Combien allez-vous <span>réellement payer ?</span></h2>
+      <p class="tae-subtitle">Voici des simulations pour vous donner une idée précise de votre reste à charge mensuel.</p>
+    </div>
+
+    <div class="tae-grid">
+
+      <!-- Exemple 1 -->
+      <div class="tae-example">
+        <div class="tae-example-head">
+          <div class="tae-example-icon tae-ei1">👨‍👩‍👧</div>
+          <div class="tae-example-head-text">
+            <h3>Exemple : Couple, 1 enfant</h3>
+            <p>Revenus modestes · Garde 5 jours/semaine</p>
+          </div>
+        </div>
+
+        <div class="tae-line">
+          <span class="tae-line-label">Facture mensuelle crèche</span>
+          <span class="tae-line-value red">1 500 €</span>
+        </div>
+        <div class="tae-line">
+          <span class="tae-line-label">CMG versé par la CAF</span>
+          <span class="tae-line-value green">– 712 €</span>
+        </div>
+        <div class="tae-line">
+          <span class="tae-line-label">Reste à charge mensuel</span>
+          <span class="tae-line-value red">788 €</span>
+        </div>
+        <div class="tae-line">
+          <span class="tae-line-label">Crédit d'impôt 50% (plafonné)</span>
+          <span class="tae-line-value green">– 192 €/mois*</span>
+        </div>
+
+        <div class="tae-total tae-total-green">
+          <div class="tae-total-label">Coût réel par mois</div>
+          <div class="tae-total-value">≈ 596 €</div>
+          <div class="tae-total-sub">*Crédit d'impôt lissé sur 12 mois (plafonné à 2 300€/an)</div>
+        </div>
+      </div>
+
+      <!-- Crédit d'impôt -->
+      <div class="tae-credit">
+        <h3><span style="font-size:28px;">🧾</span> Le crédit d'impôt</h3>
+        <p class="tae-credit-text">En plus du CMG, vous bénéficiez d'un <strong>crédit d'impôt de 50%</strong> sur les frais de garde restants à votre charge. Ce crédit est plafonné à 2 300 € par enfant et par an (soit un avantage fiscal max de 1 150 €/an).</p>
+
+        <div class="tae-credit-steps">
+          <div class="tae-credit-step">
+            <div class="tae-credit-step-num tae-csn-orange">1</div>
+            <div class="tae-credit-step-text"><strong>Vous payez</strong> la facture mensuelle à la micro-crèche chaque mois</div>
+          </div>
+          <div class="tae-credit-step">
+            <div class="tae-credit-step-num tae-csn-green">2</div>
+            <div class="tae-credit-step-text"><strong>La CAF vous rembourse</strong> le CMG chaque mois (jusqu'à 85% de la facture)</div>
+          </div>
+          <div class="tae-credit-step">
+            <div class="tae-credit-step-num tae-csn-blue">3</div>
+            <div class="tae-credit-step-text"><strong>Aux impôts</strong>, vous déclarez le reste à charge et récupérez 50% en crédit d'impôt</div>
+          </div>
+        </div>
+
+        <div class="tae-credit-highlight">
+          <p>Crédit d'impôt maximum par an et par enfant</p>
+          <strong>1 150 €</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
